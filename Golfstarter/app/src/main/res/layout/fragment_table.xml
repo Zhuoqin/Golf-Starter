@@ -3,1745 +3,1748 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".TableFragment">
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_gravity="left|bottom">
-
-
-        <TableLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_gravity="start|top"
-            android:background="#CCC"
-            android:paddingTop="1dp"
-            android:stretchColumns="0"
-            android:baselineAligned="false"
-            android:id="@+id/table">
-
-            <!--Title row-->
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="#CCC"
-                android:paddingBottom="1dp"
-                android:paddingEnd="1dp"
-                android:id="@+id/titleRow">
-
-                <TextView
-                    android:text="Player#"
-                    android:padding="3dip"
-                    android:layout_marginStart="1dp"
-                    android:background="#FFF"
-                    android:id="@+id/playerNumTitle"
-                    />
-
-                <TextView
-                    android:text="Cart#/Walking"
-                    android:gravity="end"
-                    android:padding="3dip"
-                    android:layout_marginStart="1dp"
-                    android:background="#FFF"
-                    android:id="@+id/cartNumTitle"/>
-
-                <TextView
-                    android:text="StartTime"
-                    android:gravity="end"
-                    android:padding="3dip"
-                    android:layout_marginStart="1dp"
-                    android:background="#FFF"
-                    android:id="@+id/startTimeTitle"/>
-
-                <TextView
-                    android:text="Hole#"
-                    android:gravity="end"
-                    android:padding="3dip"
-                    android:layout_marginStart="1dp"
-                    android:background="#787272"
-                    android:id="@+id/process1HoleTitle"/>
-
-                <TextView
-                    android:text="Time"
-                    android:gravity="end"
-                    android:padding="3dip"
-                    android:layout_marginStart="1dp"
-                    android:background="#787272"
-                    android:id="@+id/process1TimeTitle"/>
-
-
-                <TextView
-                    android:text="After9Holes"
-                    android:gravity="end"
-                    android:padding="3dip"
-                    android:layout_marginStart="1dp"
-                    android:background="#FFF"
-                    android:id="@+id/After9Title"/>
-
-
-                <TextView
-                    android:text="Hole#"
-                    android:gravity="end"
-                    android:padding="3dip"
-                    android:layout_marginStart="1dp"
-                    android:background="#787272"
-                    android:id="@+id/process2HoleTitle"/>
-
-                <TextView
-                    android:text="Time"
-                    android:gravity="end"
-                    android:padding="3dip"
-                    android:layout_marginStart="1dp"
-                    android:background="#787272"
-                    android:id="@+id/process2TimeTitle"/>
-                <TextView
-                    android:text="After18Holes"
-                    android:gravity="end"
-                    android:padding="3dip"
-                    android:layout_marginStart="1dp"
-                    android:background="#FFF"
-                    android:id="@+id/After18Title"/>
-
-            </TableRow>
-
-            <!--second Row -->
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="#CCC"
-                android:paddingBottom="1dp"
-                android:paddingEnd="1dp">
-                <!-- Player# -->
-                <EditText
-                    android:layout_height="match_parent"
-                    android:gravity="end"
-                    android:padding="3dip"
-                    android:layout_marginStart="1dp"
-                    android:background="#FFF"
-                    android:inputType="number" />
-                <!-- cart# -->
-                <EditText
-                    android:layout_height="match_parent"
-                    android:gravity="end"
-                    android:padding="3dip"
-                    android:layout_marginStart="1dp"
-                    android:background="#FFF"/>
-
-                <!-- startTime -->
-                <EditText
-                    android:layout_height="match_parent"
-                    android:gravity="end"
-                    android:padding="3dip"
-                    android:layout_marginStart="1dp"
-                    android:background="#FFF"
-                    android:inputType="time" />
-
-                <TableLayout
-                    android:layout_span="2"
-                    android:layout_height="220dp"
-                    android:layout_width="match_parent"
-                    android:background="#CCC"
-                    android:paddingTop="1dp"
-                    android:stretchColumns="0">
-                    <TableRow
-                        android:layout_height="wrap_content"
-                        android:paddingBottom="1dp"
-                        >
-                        <!-- Hole#1 -->
-                        <EditText
-                            android:layout_height="wrap_content"
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
-                            android:gravity="end"
-                            android:layout_marginStart="1dp"
-                            android:background="#FFF"
-                            android:inputType="number"
-                            android:id="@+id/process1Hole1"/>
-
-                        <!-- Time1 -->
-                        <EditText
-                            android:layout_height="wrap_content"
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
-                            android:gravity="end"
-                            android:layout_marginStart="1dp"
-                            android:background="#FFF"
-                            android:inputType="time"
-                            android:id="@+id/process1Time1"
-                            />
-                    </TableRow>
-
-                    <TableRow
-                        android:layout_height="wrap_content"
-                        android:paddingBottom="1dp">
-                        <!-- Hole2 -->
-                        <EditText
-                            android:layout_height="wrap_content"
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
-                            android:gravity="end"
-                            android:layout_marginStart="1dp"
-                            android:background="#FFF"
-                            android:inputType="number"
-                            android:id="@+id/process1Hole2"/>
-
-                        <!-- Time2 -->
-                        <EditText
-                            android:layout_height="wrap_content"
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
-                            android:gravity="end"
-                            android:layout_marginStart="1dp"
-                            android:background="#FFF"
-                            android:inputType="time"
-                            android:id="@+id/process1Time2"/>
-                    </TableRow>
-
-                    <TableRow
-                        android:layout_height="wrap_content"
-                        android:paddingBottom="1dp">
-                        <!-- Hole3 -->
-                        <EditText
-                            android:layout_height="wrap_content"
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
-                            android:gravity="end"
-                            android:layout_marginStart="1dp"
-                            android:background="#FFF"
-                            android:inputType="number"
-                            android:id="@+id/process1Hole3"/>
-
-                        <!-- Time3 -->
-                        <EditText
-                            android:layout_height="wrap_content"
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
-                            android:gravity="end"
-                            android:layout_marginStart="1dp"
-                            android:background="#FFF"
-                            android:inputType="time"
-                            android:id="@+id/process1Time3"/>
-                    </TableRow>
-
-                    <TableRow
-                        android:layout_height="wrap_content"
-                        android:paddingBottom="1dp">
-                        <!-- Hole4 -->
-                        <EditText
-                            android:layout_height="wrap_content"
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
-                            android:gravity="end"
-                            android:layout_marginStart="1dp"
-                            android:background="#FFF"
-                            android:inputType="number"
-                            android:id="@+id/process1Hole4"/>
-
-                        <!-- Time4 -->
-                        <EditText
-                            android:layout_height="wrap_content"
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
-                            android:gravity="end"
-                            android:layout_marginStart="1dp"
-                            android:background="#FFF"
-                            android:inputType="time"
-                            android:id="@+id/process1Time4"/>
-                    </TableRow>
-
-                    <TableRow
-                        android:layout_height="wrap_content"
-                        android:paddingBottom="1dp">
-                        <!-- Hole5 -->
-                        <EditText
-                            android:layout_height="wrap_content"
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
-                            android:gravity="end"
-                            android:layout_marginStart="1dp"
-                            android:background="#FFF"
-                            android:inputType="number"
-                            android:id="@+id/process1Hole5"/>
-
-                        <!-- Time5 -->
-                        <EditText
-                            android:layout_height="wrap_content"
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
-                            android:gravity="end"
-                            android:layout_marginStart="1dp"
-                            android:background="#FFF"
-                            android:inputType="time"
-                            android:id="@+id/process1Time5"/>
-                    </TableRow>
-
-                    <TableRow
-                        android:layout_height="wrap_content"
-                        android:paddingBottom="1dp">
-                        <!-- Hole6 -->
-                        <EditText
-                            android:layout_height="wrap_content"
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
-                            android:gravity="end"
-                            android:layout_marginStart="1dp"
-                            android:background="#FFF"
-                            android:inputType="number"
-                            android:id="@+id/process1Hole6"/>
-
-                        <!-- Time6 -->
-                        <EditText
-                            android:layout_height="wrap_content"
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
-                            android:gravity="end"
-                            android:layout_marginStart="1dp"
-                            android:background="#FFF"
-                            android:inputType="time"
-                            android:id="@+id/process1Time6"/>
-                    </TableRow>
-
-                    <TableRow
-                        android:layout_height="wrap_content"
-                        android:paddingBottom="1dp">
-                        <!-- Hole7 -->
-                        <EditText
-                            android:layout_height="wrap_content"
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
-                            android:gravity="end"
-                            android:layout_marginStart="1dp"
-                            android:background="#FFF"
-                            android:inputType="number"
-                            android:id="@+id/process1Hole7"/>
-
-                        <!-- Time7 -->
-                        <EditText
-                            android:layout_height="wrap_content"
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
-                            android:gravity="end"
-                            android:layout_marginStart="1dp"
-                            android:background="#FFF"
-                            android:inputType="time"
-                            android:id="@+id/process1Time7"/>
-                    </TableRow>
-
-                    <TableRow
-                        android:layout_height="wrap_content"
-                        android:paddingBottom="1dp">
-                        <!-- Hole8 -->
-                        <EditText
-                            android:layout_height="wrap_content"
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
-                            android:gravity="end"
-                            android:layout_marginStart="1dp"
-                            android:background="#FFF"
-                            android:inputType="number"
-                            android:id="@+id/process1Hole8"/>
-
-                        <!-- Time8 -->
-                        <EditText
-                            android:layout_height="wrap_content"
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
-                            android:gravity="end"
-                            android:layout_marginStart="1dp"
-                            android:background="#FFF"
-                            android:inputType="time"
-                            android:id="@+id/process1Time8"/>
-                    </TableRow>
-
-                    <TableRow
-                        android:layout_height="wrap_content"
-                        android:paddingBottom="1dp">
-                        <!-- Hole9 -->
-                        <EditText
-                            android:layout_height="wrap_content"
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
-                            android:gravity="end"
-                            android:layout_marginStart="1dp"
-                            android:background="#FFF"
-                            android:inputType="number"
-                            android:id="@+id/process1Hole9"/>
-
-                        <!-- Time9 -->
-                        <EditText
-                            android:layout_height="wrap_content"
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
-                            android:gravity="end"
-                            android:layout_marginStart="1dp"
-                            android:background="#FFF"
-                            android:inputType="time"
-                            android:id="@+id/process1Time9"/>
-                    </TableRow>
-
-
-                </TableLayout>
-
-
-                <!-- After 9  -->
-                <EditText
-                    android:layout_height="match_parent"
-                    android:gravity="end"
-                    android:padding="3dip"
-                    android:layout_marginStart="1dp"
-                    android:background="#FFF"
-                    android:inputType="time" />
-
-                <TableLayout
-                    android:layout_span="2"
-                    android:layout_height="220dp"
-                    android:layout_width="match_parent"
-                    android:background="#CCC"
-                    android:paddingTop="1dp"
-                    android:stretchColumns="0">
-                    <TableRow
-                        android:layout_height="wrap_content"
-                        android:paddingBottom="1dp"
-                        >
-                        <!-- Hole#1 -->
-                        <EditText
-                            android:layout_height="wrap_content"
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
-                            android:gravity="end"
-                            android:layout_marginStart="1dp"
-                            android:background="#FFF"
-                            android:inputType="number"
-                            android:id="@+id/process2Hole1"/>
-
-                        <!-- Time1 -->
-                        <EditText
-                            android:layout_height="wrap_content"
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
-                            android:gravity="end"
-                            android:layout_marginStart="1dp"
-                            android:background="#FFF"
-                            android:inputType="time"
-                            android:id="@+id/process2Time1"
-                            />
-                    </TableRow>
-
-                    <TableRow
-                        android:layout_height="wrap_content"
-                        android:paddingBottom="1dp">
-                        <!-- Hole2 -->
-                        <EditText
-                            android:layout_height="wrap_content"
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
-                            android:gravity="end"
-                            android:layout_marginStart="1dp"
-                            android:background="#FFF"
-                            android:inputType="number"
-                            android:id="@+id/process2Hole2"/>
-
-                        <!-- Time2 -->
-                        <EditText
-                            android:layout_height="wrap_content"
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
-                            android:gravity="end"
-                            android:layout_marginStart="1dp"
-                            android:background="#FFF"
-                            android:inputType="time"
-                            android:id="@+id/process2Time2"/>
-                    </TableRow>
-
-                    <TableRow
-                        android:layout_height="wrap_content"
-                        android:paddingBottom="1dp">
-                        <!-- Hole3 -->
-                        <EditText
-                            android:layout_height="wrap_content"
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
-                            android:gravity="end"
-                            android:layout_marginStart="1dp"
-                            android:background="#FFF"
-                            android:inputType="number"
-                            android:id="@+id/process2Hole3"/>
-
-                        <!-- Time3 -->
-                        <EditText
-                            android:layout_height="wrap_content"
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
-                            android:gravity="end"
-                            android:layout_marginStart="1dp"
-                            android:background="#FFF"
-                            android:inputType="time"
-                            android:id="@+id/process2Time3"/>
-                    </TableRow>
-
-                    <TableRow
-                        android:layout_height="wrap_content"
-                        android:paddingBottom="1dp">
-                        <!-- Hole4 -->
-                        <EditText
-                            android:layout_height="wrap_content"
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
-                            android:gravity="end"
-                            android:layout_marginStart="1dp"
-                            android:background="#FFF"
-                            android:inputType="number"
-                            android:id="@+id/process2Hole4"/>
-
-                        <!-- Time4 -->
-                        <EditText
-                            android:layout_height="wrap_content"
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
-                            android:gravity="end"
-                            android:layout_marginStart="1dp"
-                            android:background="#FFF"
-                            android:inputType="time"
-                            android:id="@+id/process2Time4"/>
-                    </TableRow>
-
-                    <TableRow
-                        android:layout_height="wrap_content"
-                        android:paddingBottom="1dp">
-                        <!-- Hole5 -->
-                        <EditText
-                            android:layout_height="wrap_content"
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
-                            android:gravity="end"
-                            android:layout_marginStart="1dp"
-                            android:background="#FFF"
-                            android:inputType="number"
-                            android:id="@+id/process2Hole5"/>
-
-                        <!-- Time5 -->
-                        <EditText
-                            android:layout_height="wrap_content"
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
-                            android:gravity="end"
-                            android:layout_marginStart="1dp"
-                            android:background="#FFF"
-                            android:inputType="time"
-                            android:id="@+id/process2Time5"/>
-                    </TableRow>
-
-                    <TableRow
-                        android:layout_height="wrap_content"
-                        android:paddingBottom="1dp">
-                        <!-- Hole6 -->
-                        <EditText
-                            android:layout_height="wrap_content"
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
-                            android:gravity="end"
-                            android:layout_marginStart="1dp"
-                            android:background="#FFF"
-                            android:inputType="number"
-                            android:id="@+id/process2Hole6"/>
-
-                        <!-- Time6 -->
-                        <EditText
-                            android:layout_height="wrap_content"
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
-                            android:gravity="end"
-                            android:layout_marginStart="1dp"
-                            android:background="#FFF"
-                            android:inputType="time"
-                            android:id="@+id/process2Time6"/>
-                    </TableRow>
-
-                    <TableRow
-                        android:layout_height="wrap_content"
-                        android:paddingBottom="1dp">
-                        <!-- Hole7 -->
-                        <EditText
-                            android:layout_height="wrap_content"
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
-                            android:gravity="end"
-                            android:layout_marginStart="1dp"
-                            android:background="#FFF"
-                            android:inputType="number"
-                            android:id="@+id/process2Hole7"/>
-
-                        <!-- Time7 -->
-                        <EditText
-                            android:layout_height="wrap_content"
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
-                            android:gravity="end"
-                            android:layout_marginStart="1dp"
-                            android:background="#FFF"
-                            android:inputType="time"
-                            android:id="@+id/process2Time7"/>
-                    </TableRow>
-
-                    <TableRow
-                        android:layout_height="wrap_content"
-                        android:paddingBottom="1dp">
-                        <!-- Hole8 -->
-                        <EditText
-                            android:layout_height="wrap_content"
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
-                            android:gravity="end"
-                            android:layout_marginStart="1dp"
-                            android:background="#FFF"
-                            android:inputType="number"
-                            android:id="@+id/process2Hole8"/>
-
-                        <!-- Time8 -->
-                        <EditText
-                            android:layout_height="wrap_content"
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
-                            android:gravity="end"
-                            android:layout_marginStart="1dp"
-                            android:background="#FFF"
-                            android:inputType="time"
-                            android:id="@+id/process2Time8"/>
-                    </TableRow>
-
-                    <TableRow
-                        android:layout_height="wrap_content"
-                        android:paddingBottom="1dp">
-                        <!-- Hole9 -->
-                        <EditText
-                            android:layout_height="wrap_content"
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
-                            android:gravity="end"
-                            android:layout_marginStart="1dp"
-                            android:background="#FFF"
-                            android:inputType="number"
-                            android:id="@+id/process2Hole9"/>
-
-                        <!-- Time9 -->
-                        <EditText
-                            android:layout_height="wrap_content"
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
-                            android:gravity="end"
-                            android:layout_marginStart="1dp"
-                            android:background="#FFF"
-                            android:inputType="time"
-                            android:id="@+id/process2Time9"/>
-                    </TableRow>
-
-
-                </TableLayout>
-
-
-                <!-- After 18  -->
-                <EditText
-                    android:layout_height="match_parent"
-                    android:gravity="end"
-                    android:padding="3dip"
-                    android:layout_marginStart="1dp"
-                    android:background="#FFF"
-                    android:inputType="time" />
-            </TableRow>
-
-            <!--Third Row -->
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="#CCC"
-                android:paddingBottom="1dp"
-                android:paddingEnd="1dp">
-                <!-- Player# -->
-                <EditText
-                    android:layout_height="match_parent"
-                    android:gravity="end"
-                    android:padding="3dip"
-                    android:layout_marginStart="1dp"
-                    android:background="#FFF"
-                    android:inputType="number" />
-                <!-- cart# -->
-                <EditText
-                    android:layout_height="match_parent"
-                    android:gravity="end"
-                    android:padding="3dip"
-                    android:layout_marginStart="1dp"
-                    android:background="#FFF"/>
-
-                <!-- startTime -->
-                <EditText
-                    android:layout_height="match_parent"
-                    android:gravity="end"
-                    android:padding="3dip"
-                    android:layout_marginStart="1dp"
-                    android:background="#FFF"
-                    android:inputType="time" />
-
-                <TableLayout
-                    android:layout_span="2"
-                    android:layout_height="200dp"
-                    android:layout_width="match_parent"
-                    android:background="#CCC"
-                    android:paddingTop="1dp"
-                    android:stretchColumns="0">
-                    <TableRow
-                        android:layout_height="wrap_content"
-                        android:paddingBottom="1dp"
-                        >
-                        <!-- Hole#1 -->
-                        <EditText
-                            android:layout_height="wrap_content"
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
-                            android:gravity="end"
-                            android:layout_marginStart="1dp"
-                            android:background="#FFF"
-                            android:inputType="number"
-                            />
-
-                        <!-- Time1 -->
-                        <EditText
-                            android:layout_height="wrap_content"
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
-                            android:gravity="end"
-                            android:layout_marginStart="1dp"
-                            android:background="#FFF"
-                            android:inputType="time"
-
-                            />
-                    </TableRow>
-
-                    <TableRow
-                        android:layout_height="wrap_content"
-                        android:paddingBottom="1dp">
-                        <!-- Hole2 -->
-                        <EditText
-                            android:layout_height="wrap_content"
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
-                            android:gravity="end"
-                            android:layout_marginStart="1dp"
-                            android:background="#FFF"
-                            android:inputType="number"
-                            />
-
-                        <!-- Time2 -->
-                        <EditText
-                            android:layout_height="wrap_content"
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
-                            android:gravity="end"
-                            android:layout_marginStart="1dp"
-                            android:background="#FFF"
-                            android:inputType="time"
-                            />
-                    </TableRow>
-
-                    <TableRow
-                        android:layout_height="wrap_content"
-                        android:paddingBottom="1dp">
-                        <!-- Hole3 -->
-                        <EditText
-                            android:layout_height="wrap_content"
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
-                            android:gravity="end"
-                            android:layout_marginStart="1dp"
-                            android:background="#FFF"
-                            android:inputType="number"
-                            />
-
-                        <!-- Time3 -->
-                        <EditText
-                            android:layout_height="wrap_content"
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
-                            android:gravity="end"
-                            android:layout_marginStart="1dp"
-                            android:background="#FFF"
-                            android:inputType="time"
-                            />
-                    </TableRow>
-
-                    <TableRow
-                        android:layout_height="wrap_content"
-                        android:paddingBottom="1dp">
-                        <!-- Hole4 -->
-                        <EditText
-                            android:layout_height="wrap_content"
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
-                            android:gravity="end"
-                            android:layout_marginStart="1dp"
-                            android:background="#FFF"
-                            android:inputType="number"
-                            />
-
-                        <!-- Time4 -->
-                        <EditText
-                            android:layout_height="wrap_content"
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
-                            android:gravity="end"
-                            android:layout_marginStart="1dp"
-                            android:background="#FFF"
-                            android:inputType="time"
-                            />
-                    </TableRow>
-
-                    <TableRow
-                        android:layout_height="wrap_content"
-                        android:paddingBottom="1dp">
-                        <!-- Hole5 -->
-                        <EditText
-                            android:layout_height="wrap_content"
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
-                            android:gravity="end"
-                            android:layout_marginStart="1dp"
-                            android:background="#FFF"
-                            android:inputType="number"
-                            />
-
-                        <!-- Time5 -->
-                        <EditText
-                            android:layout_height="wrap_content"
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
-                            android:gravity="end"
-                            android:layout_marginStart="1dp"
-                            android:background="#FFF"
-                            android:inputType="time"
-                            />
-                    </TableRow>
-
-                    <TableRow
-                        android:layout_height="wrap_content"
-                        android:paddingBottom="1dp">
-                        <!-- Hole6 -->
-                        <EditText
-                            android:layout_height="wrap_content"
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
-                            android:gravity="end"
-                            android:layout_marginStart="1dp"
-                            android:background="#FFF"
-                            android:inputType="number"
-                            />
-
-                        <!-- Time6 -->
-                        <EditText
-                            android:layout_height="wrap_content"
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
-                            android:gravity="end"
-                            android:layout_marginStart="1dp"
-                            android:background="#FFF"
-                            android:inputType="time"
-                            />
-                    </TableRow>
-
-                    <TableRow
-                        android:layout_height="wrap_content"
-                        android:paddingBottom="1dp">
-                        <!-- Hole7 -->
-                        <EditText
-                            android:layout_height="wrap_content"
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
-                            android:gravity="end"
-                            android:layout_marginStart="1dp"
-                            android:background="#FFF"
-                            android:inputType="number"
-                            />
-
-                        <!-- Time7 -->
-                        <EditText
-                            android:layout_height="wrap_content"
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
-                            android:gravity="end"
-                            android:layout_marginStart="1dp"
-                            android:background="#FFF"
-                            android:inputType="time"
-                            />
-                    </TableRow>
-
-                    <TableRow
-                        android:layout_height="wrap_content"
-                        android:paddingBottom="1dp">
-                        <!-- Hole8 -->
-                        <EditText
-                            android:layout_height="wrap_content"
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
-                            android:gravity="end"
-                            android:layout_marginStart="1dp"
-                            android:background="#FFF"
-                            android:inputType="number"
-                            />
-
-                        <!-- Time8 -->
-                        <EditText
-                            android:layout_height="wrap_content"
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
-                            android:gravity="end"
-                            android:layout_marginStart="1dp"
-                            android:background="#FFF"
-                            android:inputType="time"
-                            />
-                    </TableRow>
-
-                    <TableRow
-                        android:layout_height="wrap_content"
-                        android:paddingBottom="1dp">
-                        <!-- Hole9 -->
-                        <EditText
-                            android:layout_height="wrap_content"
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
-                            android:gravity="end"
-                            android:layout_marginStart="1dp"
-                            android:background="#FFF"
-                            android:inputType="number"
-                            />
-
-                        <!-- Time9 -->
-                        <EditText
-                            android:layout_height="wrap_content"
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
-                            android:gravity="end"
-                            android:layout_marginStart="1dp"
-                            android:background="#FFF"
-                            android:inputType="time"
-                            />
-                    </TableRow>
-
-
-                </TableLayout>
-
-
-                <!-- After 9  -->
-                <EditText
-                    android:layout_height="match_parent"
-                    android:gravity="end"
-                    android:padding="3dip"
-                    android:layout_marginStart="1dp"
-                    android:background="#FFF"
-                    android:inputType="time" />
-
-                <TableLayout
-                    android:layout_span="2"
-                    android:layout_height="200dp"
-                    android:layout_width="match_parent"
-                    android:background="#CCC"
-                    android:paddingTop="1dp"
-                    android:stretchColumns="0">
-                    <TableRow
-                        android:layout_height="wrap_content"
-                        android:paddingBottom="1dp"
-                        >
-                        <!-- Hole#1 -->
-                        <EditText
-                            android:layout_height="wrap_content"
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
-                            android:gravity="end"
-                            android:layout_marginStart="1dp"
-                            android:background="#FFF"
-                            android:inputType="number"
-                            />
-
-                        <!-- Time1 -->
-                        <EditText
-                            android:layout_height="wrap_content"
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
-                            android:gravity="end"
-                            android:layout_marginStart="1dp"
-                            android:background="#FFF"
-                            android:inputType="time"
-
-                            />
-                    </TableRow>
-
-                    <TableRow
-                        android:layout_height="wrap_content"
-                        android:paddingBottom="1dp">
-                        <!-- Hole2 -->
-                        <EditText
-                            android:layout_height="wrap_content"
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
-                            android:gravity="end"
-                            android:layout_marginStart="1dp"
-                            android:background="#FFF"
-                            android:inputType="number"
-                            />
-
-                        <!-- Time2 -->
-                        <EditText
-                            android:layout_height="wrap_content"
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
-                            android:gravity="end"
-                            android:layout_marginStart="1dp"
-                            android:background="#FFF"
-                            android:inputType="time"
-                            />
-                    </TableRow>
-
-                    <TableRow
-                        android:layout_height="wrap_content"
-                        android:paddingBottom="1dp">
-                        <!-- Hole3 -->
-                        <EditText
-                            android:layout_height="wrap_content"
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
-                            android:gravity="end"
-                            android:layout_marginStart="1dp"
-                            android:background="#FFF"
-                            android:inputType="number"
-                            />
-
-                        <!-- Time3 -->
-                        <EditText
-                            android:layout_height="wrap_content"
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
-                            android:gravity="end"
-                            android:layout_marginStart="1dp"
-                            android:background="#FFF"
-                            android:inputType="time"
-                            />
-                    </TableRow>
-
-                    <TableRow
-                        android:layout_height="wrap_content"
-                        android:paddingBottom="1dp">
-                        <!-- Hole4 -->
-                        <EditText
-                            android:layout_height="wrap_content"
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
-                            android:gravity="end"
-                            android:layout_marginStart="1dp"
-                            android:background="#FFF"
-                            android:inputType="number"
-                            />
-
-                        <!-- Time4 -->
-                        <EditText
-                            android:layout_height="wrap_content"
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
-                            android:gravity="end"
-                            android:layout_marginStart="1dp"
-                            android:background="#FFF"
-                            android:inputType="time"
-                            />
-                    </TableRow>
-
-                    <TableRow
-                        android:layout_height="wrap_content"
-                        android:paddingBottom="1dp">
-                        <!-- Hole5 -->
-                        <EditText
-                            android:layout_height="wrap_content"
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
-                            android:gravity="end"
-                            android:layout_marginStart="1dp"
-                            android:background="#FFF"
-                            android:inputType="number"
-                            />
-
-                        <!-- Time5 -->
-                        <EditText
-                            android:layout_height="wrap_content"
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
-                            android:gravity="end"
-                            android:layout_marginStart="1dp"
-                            android:background="#FFF"
-                            android:inputType="time"
-                            />
-                    </TableRow>
-
-                    <TableRow
-                        android:layout_height="wrap_content"
-                        android:paddingBottom="1dp">
-                        <!-- Hole6 -->
-                        <EditText
-                            android:layout_height="wrap_content"
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
-                            android:gravity="end"
-                            android:layout_marginStart="1dp"
-                            android:background="#FFF"
-                            android:inputType="number"
-                            />
-
-                        <!-- Time6 -->
-                        <EditText
-                            android:layout_height="wrap_content"
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
-                            android:gravity="end"
-                            android:layout_marginStart="1dp"
-                            android:background="#FFF"
-                            android:inputType="time"
-                            />
-                    </TableRow>
-
-                    <TableRow
-                        android:layout_height="wrap_content"
-                        android:paddingBottom="1dp">
-                        <!-- Hole7 -->
-                        <EditText
-                            android:layout_height="wrap_content"
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
-                            android:gravity="end"
-                            android:layout_marginStart="1dp"
-                            android:background="#FFF"
-                            android:inputType="number"
-                            />
-
-                        <!-- Time7 -->
-                        <EditText
-                            android:layout_height="wrap_content"
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
-                            android:gravity="end"
-                            android:layout_marginStart="1dp"
-                            android:background="#FFF"
-                            android:inputType="time"
-                            />
-                    </TableRow>
-
-                    <TableRow
-                        android:layout_height="wrap_content"
-                        android:paddingBottom="1dp">
-                        <!-- Hole8 -->
-                        <EditText
-                            android:layout_height="wrap_content"
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
-                            android:gravity="end"
-                            android:layout_marginStart="1dp"
-                            android:background="#FFF"
-                            android:inputType="number"
-                            />
-
-                        <!-- Time8 -->
-                        <EditText
-                            android:layout_height="wrap_content"
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
-                            android:gravity="end"
-                            android:layout_marginStart="1dp"
-                            android:background="#FFF"
-                            android:inputType="time"
-                            />
-                    </TableRow>
-
-                    <TableRow
-                        android:layout_height="wrap_content"
-                        android:paddingBottom="1dp">
-                        <!-- Hole9 -->
-                        <EditText
-                            android:layout_height="wrap_content"
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
-                            android:gravity="end"
-                            android:layout_marginStart="1dp"
-                            android:background="#FFF"
-                            android:inputType="number"
-                            />
-
-                        <!-- Time9 -->
-                        <EditText
-                            android:layout_height="wrap_content"
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
-                            android:gravity="end"
-                            android:layout_marginStart="1dp"
-                            android:background="#FFF"
-                            android:inputType="time"
-                            />
-                    </TableRow>
-
-
-                </TableLayout>
-
-
-                <!-- After 18  -->
-                <EditText
-                    android:layout_height="match_parent"
-                    android:gravity="end"
-                    android:padding="3dip"
-                    android:layout_marginStart="1dp"
-                    android:background="#FFF"
-                    android:inputType="time" />
-            </TableRow>
-
-            <!--Fourth Row -->
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="#CCC"
-                android:paddingBottom="1dp"
-                android:paddingEnd="1dp">
-                <!-- Player# -->
-                <EditText
-                    android:layout_height="match_parent"
-                    android:gravity="end"
-                    android:padding="3dip"
-                    android:layout_marginStart="1dp"
-                    android:background="#FFF"
-                    android:inputType="number" />
-                <!-- cart# -->
-                <EditText
-                    android:layout_height="match_parent"
-                    android:gravity="end"
-                    android:padding="3dip"
-                    android:layout_marginStart="1dp"
-                    android:background="#FFF"/>
-
-                <!-- startTime -->
-                <EditText
-                    android:layout_height="match_parent"
-                    android:gravity="end"
-                    android:padding="3dip"
-                    android:layout_marginStart="1dp"
-                    android:background="#FFF"
-                    android:inputType="time" />
-
-                <TableLayout
-                    android:layout_span="2"
-                    android:layout_height="200dp"
-                    android:layout_width="match_parent"
-                    android:background="#CCC"
-                    android:paddingTop="1dp"
-                    android:stretchColumns="0">
-                    <TableRow
-                        android:layout_height="wrap_content"
-                        android:paddingBottom="1dp"
-                        >
-                        <!-- Hole#1 -->
-                        <EditText
-                            android:layout_height="wrap_content"
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
-                            android:gravity="end"
-                            android:layout_marginStart="1dp"
-                            android:background="#FFF"
-                            android:inputType="number"
-                            />
-
-                        <!-- Time1 -->
-                        <EditText
-                            android:layout_height="wrap_content"
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
-                            android:gravity="end"
-                            android:layout_marginStart="1dp"
-                            android:background="#FFF"
-                            android:inputType="time"
-
-                            />
-                    </TableRow>
-
-                    <TableRow
-                        android:layout_height="wrap_content"
-                        android:paddingBottom="1dp">
-                        <!-- Hole2 -->
-                        <EditText
-                            android:layout_height="wrap_content"
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
-                            android:gravity="end"
-                            android:layout_marginStart="1dp"
-                            android:background="#FFF"
-                            android:inputType="number"
-                            />
-
-                        <!-- Time2 -->
-                        <EditText
-                            android:layout_height="wrap_content"
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
-                            android:gravity="end"
-                            android:layout_marginStart="1dp"
-                            android:background="#FFF"
-                            android:inputType="time"
-                            />
-                    </TableRow>
-
-                    <TableRow
-                        android:layout_height="wrap_content"
-                        android:paddingBottom="1dp">
-                        <!-- Hole3 -->
-                        <EditText
-                            android:layout_height="wrap_content"
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
-                            android:gravity="end"
-                            android:layout_marginStart="1dp"
-                            android:background="#FFF"
-                            android:inputType="number"
-                            />
-
-                        <!-- Time3 -->
-                        <EditText
-                            android:layout_height="wrap_content"
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
-                            android:gravity="end"
-                            android:layout_marginStart="1dp"
-                            android:background="#FFF"
-                            android:inputType="time"
-                            />
-                    </TableRow>
-
-                    <TableRow
-                        android:layout_height="wrap_content"
-                        android:paddingBottom="1dp">
-                        <!-- Hole4 -->
-                        <EditText
-                            android:layout_height="wrap_content"
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
-                            android:gravity="end"
-                            android:layout_marginStart="1dp"
-                            android:background="#FFF"
-                            android:inputType="number"
-                            />
-
-                        <!-- Time4 -->
-                        <EditText
-                            android:layout_height="wrap_content"
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
-                            android:gravity="end"
-                            android:layout_marginStart="1dp"
-                            android:background="#FFF"
-                            android:inputType="time"
-                            />
-                    </TableRow>
-
-                    <TableRow
-                        android:layout_height="wrap_content"
-                        android:paddingBottom="1dp">
-                        <!-- Hole5 -->
-                        <EditText
-                            android:layout_height="wrap_content"
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
-                            android:gravity="end"
-                            android:layout_marginStart="1dp"
-                            android:background="#FFF"
-                            android:inputType="number"
-                            />
-
-                        <!-- Time5 -->
-                        <EditText
-                            android:layout_height="wrap_content"
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
-                            android:gravity="end"
-                            android:layout_marginStart="1dp"
-                            android:background="#FFF"
-                            android:inputType="time"
-                            />
-                    </TableRow>
-
-                    <TableRow
-                        android:layout_height="wrap_content"
-                        android:paddingBottom="1dp">
-                        <!-- Hole6 -->
-                        <EditText
-                            android:layout_height="wrap_content"
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
-                            android:gravity="end"
-                            android:layout_marginStart="1dp"
-                            android:background="#FFF"
-                            android:inputType="number"
-                            />
-
-                        <!-- Time6 -->
-                        <EditText
-                            android:layout_height="wrap_content"
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
-                            android:gravity="end"
-                            android:layout_marginStart="1dp"
-                            android:background="#FFF"
-                            android:inputType="time"
-                            />
-                    </TableRow>
-
-                    <TableRow
-                        android:layout_height="wrap_content"
-                        android:paddingBottom="1dp">
-                        <!-- Hole7 -->
-                        <EditText
-                            android:layout_height="wrap_content"
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
-                            android:gravity="end"
-                            android:layout_marginStart="1dp"
-                            android:background="#FFF"
-                            android:inputType="number"
-                            />
-
-                        <!-- Time7 -->
-                        <EditText
-                            android:layout_height="wrap_content"
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
-                            android:gravity="end"
-                            android:layout_marginStart="1dp"
-                            android:background="#FFF"
-                            android:inputType="time"
-                            />
-                    </TableRow>
-
-                    <TableRow
-                        android:layout_height="wrap_content"
-                        android:paddingBottom="1dp">
-                        <!-- Hole8 -->
-                        <EditText
-                            android:layout_height="wrap_content"
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
-                            android:gravity="end"
-                            android:layout_marginStart="1dp"
-                            android:background="#FFF"
-                            android:inputType="number"
-                            />
-
-                        <!-- Time8 -->
-                        <EditText
-                            android:layout_height="wrap_content"
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
-                            android:gravity="end"
-                            android:layout_marginStart="1dp"
-                            android:background="#FFF"
-                            android:inputType="time"
-                            />
-                    </TableRow>
-
-                    <TableRow
-                        android:layout_height="wrap_content"
-                        android:paddingBottom="1dp">
-                        <!-- Hole9 -->
-                        <EditText
-                            android:layout_height="wrap_content"
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
-                            android:gravity="end"
-                            android:layout_marginStart="1dp"
-                            android:background="#FFF"
-                            android:inputType="number"
-                            />
-
-                        <!-- Time9 -->
-                        <EditText
-                            android:layout_height="wrap_content"
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
-                            android:gravity="end"
-                            android:layout_marginStart="1dp"
-                            android:background="#FFF"
-                            android:inputType="time"
-                            />
-                    </TableRow>
-
-
-                </TableLayout>
-
-
-                <!-- After 9  -->
-                <EditText
-                    android:layout_height="match_parent"
-                    android:gravity="end"
-                    android:padding="3dip"
-                    android:layout_marginStart="1dp"
-                    android:background="#FFF"
-                    android:inputType="time" />
-
-                <TableLayout
-                    android:layout_span="2"
-                    android:layout_height="200dp"
-                    android:layout_width="match_parent"
-                    android:background="#CCC"
-                    android:paddingTop="1dp"
-                    android:stretchColumns="0">
-                    <TableRow
-                        android:layout_height="wrap_content"
-                        android:paddingBottom="1dp"
-                        >
-                        <!-- Hole#1 -->
-                        <EditText
-                            android:layout_height="wrap_content"
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
-                            android:gravity="end"
-                            android:layout_marginStart="1dp"
-                            android:background="#FFF"
-                            android:inputType="number"
-                            />
-
-                        <!-- Time1 -->
-                        <EditText
-                            android:layout_height="wrap_content"
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
-                            android:gravity="end"
-                            android:layout_marginStart="1dp"
-                            android:background="#FFF"
-                            android:inputType="time"
-
-                            />
-                    </TableRow>
-
-                    <TableRow
-                        android:layout_height="wrap_content"
-                        android:paddingBottom="1dp">
-                        <!-- Hole2 -->
-                        <EditText
-                            android:layout_height="wrap_content"
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
-                            android:gravity="end"
-                            android:layout_marginStart="1dp"
-                            android:background="#FFF"
-                            android:inputType="number"
-                            />
-
-                        <!-- Time2 -->
-                        <EditText
-                            android:layout_height="wrap_content"
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
-                            android:gravity="end"
-                            android:layout_marginStart="1dp"
-                            android:background="#FFF"
-                            android:inputType="time"
-                            />
-                    </TableRow>
-
-                    <TableRow
-                        android:layout_height="wrap_content"
-                        android:paddingBottom="1dp">
-                        <!-- Hole3 -->
-                        <EditText
-                            android:layout_height="wrap_content"
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
-                            android:gravity="end"
-                            android:layout_marginStart="1dp"
-                            android:background="#FFF"
-                            android:inputType="number"
-                            />
-
-                        <!-- Time3 -->
-                        <EditText
-                            android:layout_height="wrap_content"
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
-                            android:gravity="end"
-                            android:layout_marginStart="1dp"
-                            android:background="#FFF"
-                            android:inputType="time"
-                            />
-                    </TableRow>
-
-                    <TableRow
-                        android:layout_height="wrap_content"
-                        android:paddingBottom="1dp">
-                        <!-- Hole4 -->
-                        <EditText
-                            android:layout_height="wrap_content"
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
-                            android:gravity="end"
-                            android:layout_marginStart="1dp"
-                            android:background="#FFF"
-                            android:inputType="number"
-                            />
-
-                        <!-- Time4 -->
-                        <EditText
-                            android:layout_height="wrap_content"
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
-                            android:gravity="end"
-                            android:layout_marginStart="1dp"
-                            android:background="#FFF"
-                            android:inputType="time"
-                            />
-                    </TableRow>
-
-                    <TableRow
-                        android:layout_height="wrap_content"
-                        android:paddingBottom="1dp">
-                        <!-- Hole5 -->
-                        <EditText
-                            android:layout_height="wrap_content"
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
-                            android:gravity="end"
-                            android:layout_marginStart="1dp"
-                            android:background="#FFF"
-                            android:inputType="number"
-                            />
-
-                        <!-- Time5 -->
-                        <EditText
-                            android:layout_height="wrap_content"
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
-                            android:gravity="end"
-                            android:layout_marginStart="1dp"
-                            android:background="#FFF"
-                            android:inputType="time"
-                            />
-                    </TableRow>
-
-                    <TableRow
-                        android:layout_height="wrap_content"
-                        android:paddingBottom="1dp">
-                        <!-- Hole6 -->
-                        <EditText
-                            android:layout_height="wrap_content"
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
-                            android:gravity="end"
-                            android:layout_marginStart="1dp"
-                            android:background="#FFF"
-                            android:inputType="number"
-                            />
-
-                        <!-- Time6 -->
-                        <EditText
-                            android:layout_height="wrap_content"
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
-                            android:gravity="end"
-                            android:layout_marginStart="1dp"
-                            android:background="#FFF"
-                            android:inputType="time"
-                            />
-                    </TableRow>
-
-                    <TableRow
-                        android:layout_height="wrap_content"
-                        android:paddingBottom="1dp">
-                        <!-- Hole7 -->
-                        <EditText
-                            android:layout_height="wrap_content"
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
-                            android:gravity="end"
-                            android:layout_marginStart="1dp"
-                            android:background="#FFF"
-                            android:inputType="number"
-                            />
-
-                        <!-- Time7 -->
-                        <EditText
-                            android:layout_height="wrap_content"
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
-                            android:gravity="end"
-                            android:layout_marginStart="1dp"
-                            android:background="#FFF"
-                            android:inputType="time"
-                            />
-                    </TableRow>
-
-                    <TableRow
-                        android:layout_height="wrap_content"
-                        android:paddingBottom="1dp">
-                        <!-- Hole8 -->
-                        <EditText
-                            android:layout_height="wrap_content"
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
-                            android:gravity="end"
-                            android:layout_marginStart="1dp"
-                            android:background="#FFF"
-                            android:inputType="number"
-                            />
-
-                        <!-- Time8 -->
-                        <EditText
-                            android:layout_height="wrap_content"
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
-                            android:gravity="end"
-                            android:layout_marginStart="1dp"
-                            android:background="#FFF"
-                            android:inputType="time"
-                            />
-                    </TableRow>
-
-                    <TableRow
-                        android:layout_height="wrap_content"
-                        android:paddingBottom="1dp">
-                        <!-- Hole9 -->
-                        <EditText
-                            android:layout_height="wrap_content"
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
-                            android:gravity="end"
-                            android:layout_marginStart="1dp"
-                            android:background="#FFF"
-                            android:inputType="number"
-                            />
-
-                        <!-- Time9 -->
-                        <EditText
-                            android:layout_height="wrap_content"
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
-                            android:gravity="end"
-                            android:layout_marginStart="1dp"
-                            android:background="#FFF"
-                            android:inputType="time"
-                            />
-                    </TableRow>
-
-
-                </TableLayout>
-
-
-                <!-- After 18  -->
-                <EditText
-                    android:layout_height="match_parent"
-                    android:gravity="end"
-                    android:padding="3dip"
-                    android:layout_marginStart="1dp"
-                    android:background="#FFF"
-                    android:inputType="time" />
-            </TableRow>
-
-
-
-        </TableLayout>
-
-    </ScrollView>
 
+
+    <!--<ScrollView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:layout_gravity="left|bottom">-->
+
+
+        <!--<TableLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_gravity="start|top"-->
+            <!--android:background="#CCC"-->
+            <!--android:paddingTop="1dp"-->
+            <!--android:stretchColumns="0"-->
+            <!--android:baselineAligned="false"-->
+            <!--android:id="@+id/table">-->
+
+            <!--&lt;!&ndash;Title row&ndash;&gt;-->
+            <!--<TableRow-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:background="#CCC"-->
+                <!--android:paddingBottom="1dp"-->
+                <!--android:paddingEnd="1dp"-->
+                <!--android:id="@+id/titleRow">-->
+
+                <!--<TextView-->
+                    <!--android:text="Player#"-->
+                    <!--android:padding="3dip"-->
+                    <!--android:layout_marginStart="1dp"-->
+                    <!--android:background="#FFF"-->
+                    <!--android:id="@+id/playerNumTitle"-->
+                    <!--/>-->
+
+                <!--<TextView-->
+                    <!--android:text="Cart#/Walking"-->
+                    <!--android:gravity="end"-->
+                    <!--android:padding="3dip"-->
+                    <!--android:layout_marginStart="1dp"-->
+                    <!--android:background="#FFF"-->
+                    <!--android:id="@+id/cartNumTitle"/>-->
+
+                <!--<TextView-->
+                    <!--android:text="StartTime"-->
+                    <!--android:gravity="end"-->
+                    <!--android:padding="3dip"-->
+                    <!--android:layout_marginStart="1dp"-->
+                    <!--android:background="#FFF"-->
+                    <!--android:id="@+id/startTimeTitle"/>-->
+
+                <!--<TextView-->
+                    <!--android:text="Hole#"-->
+                    <!--android:gravity="end"-->
+                    <!--android:padding="3dip"-->
+                    <!--android:layout_marginStart="1dp"-->
+                    <!--android:background="#787272"-->
+                    <!--android:id="@+id/process1HoleTitle"/>-->
+
+                <!--<TextView-->
+                    <!--android:text="Time"-->
+                    <!--android:gravity="end"-->
+                    <!--android:padding="3dip"-->
+                    <!--android:layout_marginStart="1dp"-->
+                    <!--android:background="#787272"-->
+                    <!--android:id="@+id/process1TimeTitle"/>-->
+
+
+                <!--<TextView-->
+                    <!--android:text="After9Holes"-->
+                    <!--android:gravity="end"-->
+                    <!--android:padding="3dip"-->
+                    <!--android:layout_marginStart="1dp"-->
+                    <!--android:background="#FFF"-->
+                    <!--android:id="@+id/After9Title"/>-->
+
+
+                <!--<TextView-->
+                    <!--android:text="Hole#"-->
+                    <!--android:gravity="end"-->
+                    <!--android:padding="3dip"-->
+                    <!--android:layout_marginStart="1dp"-->
+                    <!--android:background="#787272"-->
+                    <!--android:id="@+id/process2HoleTitle"/>-->
+
+                <!--<TextView-->
+                    <!--android:text="Time"-->
+                    <!--android:gravity="end"-->
+                    <!--android:padding="3dip"-->
+                    <!--android:layout_marginStart="1dp"-->
+                    <!--android:background="#787272"-->
+                    <!--android:id="@+id/process2TimeTitle"/>-->
+                <!--<TextView-->
+                    <!--android:text="After18Holes"-->
+                    <!--android:gravity="end"-->
+                    <!--android:padding="3dip"-->
+                    <!--android:layout_marginStart="1dp"-->
+                    <!--android:background="#FFF"-->
+                    <!--android:id="@+id/After18Title"/>-->
+
+            <!--</TableRow>-->
+
+            <!--&lt;!&ndash;second Row &ndash;&gt;-->
+            <!--<TableRow-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:background="#CCC"-->
+                <!--android:paddingBottom="1dp"-->
+                <!--android:paddingEnd="1dp">-->
+                <!--&lt;!&ndash; Player# &ndash;&gt;-->
+                <!--<EditText-->
+                    <!--android:layout_height="match_parent"-->
+                    <!--android:gravity="end"-->
+                    <!--android:padding="3dip"-->
+                    <!--android:layout_marginStart="1dp"-->
+                    <!--android:background="#FFF"-->
+                    <!--android:inputType="number" />-->
+                <!--&lt;!&ndash; cart# &ndash;&gt;-->
+                <!--<EditText-->
+                    <!--android:layout_height="match_parent"-->
+                    <!--android:gravity="end"-->
+                    <!--android:padding="3dip"-->
+                    <!--android:layout_marginStart="1dp"-->
+                    <!--android:background="#FFF"/>-->
+
+                <!--&lt;!&ndash; startTime &ndash;&gt;-->
+                <!--<EditText-->
+                    <!--android:layout_height="match_parent"-->
+                    <!--android:gravity="end"-->
+                    <!--android:padding="3dip"-->
+                    <!--android:layout_marginStart="1dp"-->
+                    <!--android:background="#FFF"-->
+                    <!--android:inputType="time" />-->
+
+                <!--<TableLayout-->
+                    <!--android:layout_span="2"-->
+                    <!--android:layout_height="220dp"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:background="#CCC"-->
+                    <!--android:paddingTop="1dp"-->
+                    <!--android:stretchColumns="0">-->
+                    <!--<TableRow-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:paddingBottom="1dp"-->
+                        <!--&gt;-->
+                        <!--&lt;!&ndash; Hole#1 &ndash;&gt;-->
+                        <!--<EditText-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_width="0dp"-->
+                            <!--android:layout_weight="1"-->
+                            <!--android:gravity="end"-->
+                            <!--android:layout_marginStart="1dp"-->
+                            <!--android:background="#FFF"-->
+                            <!--android:inputType="number"-->
+                            <!--android:id="@+id/process1Hole1"/>-->
+
+                        <!--&lt;!&ndash; Time1 &ndash;&gt;-->
+                        <!--<EditText-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_width="0dp"-->
+                            <!--android:layout_weight="1"-->
+                            <!--android:gravity="end"-->
+                            <!--android:layout_marginStart="1dp"-->
+                            <!--android:background="#FFF"-->
+                            <!--android:inputType="time"-->
+                            <!--android:id="@+id/process1Time1"-->
+                            <!--/>-->
+                    <!--</TableRow>-->
+
+                    <!--<TableRow-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:paddingBottom="1dp">-->
+                        <!--&lt;!&ndash; Hole2 &ndash;&gt;-->
+                        <!--<EditText-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_width="0dp"-->
+                            <!--android:layout_weight="1"-->
+                            <!--android:gravity="end"-->
+                            <!--android:layout_marginStart="1dp"-->
+                            <!--android:background="#FFF"-->
+                            <!--android:inputType="number"-->
+                            <!--android:id="@+id/process1Hole2"/>-->
+
+                        <!--&lt;!&ndash; Time2 &ndash;&gt;-->
+                        <!--<EditText-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_width="0dp"-->
+                            <!--android:layout_weight="1"-->
+                            <!--android:gravity="end"-->
+                            <!--android:layout_marginStart="1dp"-->
+                            <!--android:background="#FFF"-->
+                            <!--android:inputType="time"-->
+                            <!--android:id="@+id/process1Time2"/>-->
+                    <!--</TableRow>-->
+
+                    <!--<TableRow-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:paddingBottom="1dp">-->
+                        <!--&lt;!&ndash; Hole3 &ndash;&gt;-->
+                        <!--<EditText-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_width="0dp"-->
+                            <!--android:layout_weight="1"-->
+                            <!--android:gravity="end"-->
+                            <!--android:layout_marginStart="1dp"-->
+                            <!--android:background="#FFF"-->
+                            <!--android:inputType="number"-->
+                            <!--android:id="@+id/process1Hole3"/>-->
+
+                        <!--&lt;!&ndash; Time3 &ndash;&gt;-->
+                        <!--<EditText-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_width="0dp"-->
+                            <!--android:layout_weight="1"-->
+                            <!--android:gravity="end"-->
+                            <!--android:layout_marginStart="1dp"-->
+                            <!--android:background="#FFF"-->
+                            <!--android:inputType="time"-->
+                            <!--android:id="@+id/process1Time3"/>-->
+                    <!--</TableRow>-->
+
+                    <!--<TableRow-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:paddingBottom="1dp">-->
+                        <!--&lt;!&ndash; Hole4 &ndash;&gt;-->
+                        <!--<EditText-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_width="0dp"-->
+                            <!--android:layout_weight="1"-->
+                            <!--android:gravity="end"-->
+                            <!--android:layout_marginStart="1dp"-->
+                            <!--android:background="#FFF"-->
+                            <!--android:inputType="number"-->
+                            <!--android:id="@+id/process1Hole4"/>-->
+
+                        <!--&lt;!&ndash; Time4 &ndash;&gt;-->
+                        <!--<EditText-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_width="0dp"-->
+                            <!--android:layout_weight="1"-->
+                            <!--android:gravity="end"-->
+                            <!--android:layout_marginStart="1dp"-->
+                            <!--android:background="#FFF"-->
+                            <!--android:inputType="time"-->
+                            <!--android:id="@+id/process1Time4"/>-->
+                    <!--</TableRow>-->
+
+                    <!--<TableRow-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:paddingBottom="1dp">-->
+                        <!--&lt;!&ndash; Hole5 &ndash;&gt;-->
+                        <!--<EditText-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_width="0dp"-->
+                            <!--android:layout_weight="1"-->
+                            <!--android:gravity="end"-->
+                            <!--android:layout_marginStart="1dp"-->
+                            <!--android:background="#FFF"-->
+                            <!--android:inputType="number"-->
+                            <!--android:id="@+id/process1Hole5"/>-->
+
+                        <!--&lt;!&ndash; Time5 &ndash;&gt;-->
+                        <!--<EditText-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_width="0dp"-->
+                            <!--android:layout_weight="1"-->
+                            <!--android:gravity="end"-->
+                            <!--android:layout_marginStart="1dp"-->
+                            <!--android:background="#FFF"-->
+                            <!--android:inputType="time"-->
+                            <!--android:id="@+id/process1Time5"/>-->
+                    <!--</TableRow>-->
+
+                    <!--<TableRow-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:paddingBottom="1dp">-->
+                        <!--&lt;!&ndash; Hole6 &ndash;&gt;-->
+                        <!--<EditText-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_width="0dp"-->
+                            <!--android:layout_weight="1"-->
+                            <!--android:gravity="end"-->
+                            <!--android:layout_marginStart="1dp"-->
+                            <!--android:background="#FFF"-->
+                            <!--android:inputType="number"-->
+                            <!--android:id="@+id/process1Hole6"/>-->
+
+                        <!--&lt;!&ndash; Time6 &ndash;&gt;-->
+                        <!--<EditText-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_width="0dp"-->
+                            <!--android:layout_weight="1"-->
+                            <!--android:gravity="end"-->
+                            <!--android:layout_marginStart="1dp"-->
+                            <!--android:background="#FFF"-->
+                            <!--android:inputType="time"-->
+                            <!--android:id="@+id/process1Time6"/>-->
+                    <!--</TableRow>-->
+
+                    <!--<TableRow-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:paddingBottom="1dp">-->
+                        <!--&lt;!&ndash; Hole7 &ndash;&gt;-->
+                        <!--<EditText-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_width="0dp"-->
+                            <!--android:layout_weight="1"-->
+                            <!--android:gravity="end"-->
+                            <!--android:layout_marginStart="1dp"-->
+                            <!--android:background="#FFF"-->
+                            <!--android:inputType="number"-->
+                            <!--android:id="@+id/process1Hole7"/>-->
+
+                        <!--&lt;!&ndash; Time7 &ndash;&gt;-->
+                        <!--<EditText-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_width="0dp"-->
+                            <!--android:layout_weight="1"-->
+                            <!--android:gravity="end"-->
+                            <!--android:layout_marginStart="1dp"-->
+                            <!--android:background="#FFF"-->
+                            <!--android:inputType="time"-->
+                            <!--android:id="@+id/process1Time7"/>-->
+                    <!--</TableRow>-->
+
+                    <!--<TableRow-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:paddingBottom="1dp">-->
+                        <!--&lt;!&ndash; Hole8 &ndash;&gt;-->
+                        <!--<EditText-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_width="0dp"-->
+                            <!--android:layout_weight="1"-->
+                            <!--android:gravity="end"-->
+                            <!--android:layout_marginStart="1dp"-->
+                            <!--android:background="#FFF"-->
+                            <!--android:inputType="number"-->
+                            <!--android:id="@+id/process1Hole8"/>-->
+
+                        <!--&lt;!&ndash; Time8 &ndash;&gt;-->
+                        <!--<EditText-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_width="0dp"-->
+                            <!--android:layout_weight="1"-->
+                            <!--android:gravity="end"-->
+                            <!--android:layout_marginStart="1dp"-->
+                            <!--android:background="#FFF"-->
+                            <!--android:inputType="time"-->
+                            <!--android:id="@+id/process1Time8"/>-->
+                    <!--</TableRow>-->
+
+                    <!--<TableRow-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:paddingBottom="1dp">-->
+                        <!--&lt;!&ndash; Hole9 &ndash;&gt;-->
+                        <!--<EditText-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_width="0dp"-->
+                            <!--android:layout_weight="1"-->
+                            <!--android:gravity="end"-->
+                            <!--android:layout_marginStart="1dp"-->
+                            <!--android:background="#FFF"-->
+                            <!--android:inputType="number"-->
+                            <!--android:id="@+id/process1Hole9"/>-->
+
+                        <!--&lt;!&ndash; Time9 &ndash;&gt;-->
+                        <!--<EditText-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_width="0dp"-->
+                            <!--android:layout_weight="1"-->
+                            <!--android:gravity="end"-->
+                            <!--android:layout_marginStart="1dp"-->
+                            <!--android:background="#FFF"-->
+                            <!--android:inputType="time"-->
+                            <!--android:id="@+id/process1Time9"/>-->
+                    <!--</TableRow>-->
+
+
+                <!--</TableLayout>-->
+
+
+                <!--&lt;!&ndash; After 9  &ndash;&gt;-->
+                <!--<EditText-->
+                    <!--android:layout_height="match_parent"-->
+                    <!--android:gravity="end"-->
+                    <!--android:padding="3dip"-->
+                    <!--android:layout_marginStart="1dp"-->
+                    <!--android:background="#FFF"-->
+                    <!--android:inputType="time" />-->
+
+                <!--<TableLayout-->
+                    <!--android:layout_span="2"-->
+                    <!--android:layout_height="220dp"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:background="#CCC"-->
+                    <!--android:paddingTop="1dp"-->
+                    <!--android:stretchColumns="0">-->
+                    <!--<TableRow-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:paddingBottom="1dp"-->
+                        <!--&gt;-->
+                        <!--&lt;!&ndash; Hole#1 &ndash;&gt;-->
+                        <!--<EditText-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_width="0dp"-->
+                            <!--android:layout_weight="1"-->
+                            <!--android:gravity="end"-->
+                            <!--android:layout_marginStart="1dp"-->
+                            <!--android:background="#FFF"-->
+                            <!--android:inputType="number"-->
+                            <!--android:id="@+id/process2Hole1"/>-->
+
+                        <!--&lt;!&ndash; Time1 &ndash;&gt;-->
+                        <!--<EditText-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_width="0dp"-->
+                            <!--android:layout_weight="1"-->
+                            <!--android:gravity="end"-->
+                            <!--android:layout_marginStart="1dp"-->
+                            <!--android:background="#FFF"-->
+                            <!--android:inputType="time"-->
+                            <!--android:id="@+id/process2Time1"-->
+                            <!--/>-->
+                    <!--</TableRow>-->
+
+                    <!--<TableRow-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:paddingBottom="1dp">-->
+                        <!--&lt;!&ndash; Hole2 &ndash;&gt;-->
+                        <!--<EditText-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_width="0dp"-->
+                            <!--android:layout_weight="1"-->
+                            <!--android:gravity="end"-->
+                            <!--android:layout_marginStart="1dp"-->
+                            <!--android:background="#FFF"-->
+                            <!--android:inputType="number"-->
+                            <!--android:id="@+id/process2Hole2"/>-->
+
+                        <!--&lt;!&ndash; Time2 &ndash;&gt;-->
+                        <!--<EditText-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_width="0dp"-->
+                            <!--android:layout_weight="1"-->
+                            <!--android:gravity="end"-->
+                            <!--android:layout_marginStart="1dp"-->
+                            <!--android:background="#FFF"-->
+                            <!--android:inputType="time"-->
+                            <!--android:id="@+id/process2Time2"/>-->
+                    <!--</TableRow>-->
+
+                    <!--<TableRow-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:paddingBottom="1dp">-->
+                        <!--&lt;!&ndash; Hole3 &ndash;&gt;-->
+                        <!--<EditText-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_width="0dp"-->
+                            <!--android:layout_weight="1"-->
+                            <!--android:gravity="end"-->
+                            <!--android:layout_marginStart="1dp"-->
+                            <!--android:background="#FFF"-->
+                            <!--android:inputType="number"-->
+                            <!--android:id="@+id/process2Hole3"/>-->
+
+                        <!--&lt;!&ndash; Time3 &ndash;&gt;-->
+                        <!--<EditText-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_width="0dp"-->
+                            <!--android:layout_weight="1"-->
+                            <!--android:gravity="end"-->
+                            <!--android:layout_marginStart="1dp"-->
+                            <!--android:background="#FFF"-->
+                            <!--android:inputType="time"-->
+                            <!--android:id="@+id/process2Time3"/>-->
+                    <!--</TableRow>-->
+
+                    <!--<TableRow-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:paddingBottom="1dp">-->
+                        <!--&lt;!&ndash; Hole4 &ndash;&gt;-->
+                        <!--<EditText-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_width="0dp"-->
+                            <!--android:layout_weight="1"-->
+                            <!--android:gravity="end"-->
+                            <!--android:layout_marginStart="1dp"-->
+                            <!--android:background="#FFF"-->
+                            <!--android:inputType="number"-->
+                            <!--android:id="@+id/process2Hole4"/>-->
+
+                        <!--&lt;!&ndash; Time4 &ndash;&gt;-->
+                        <!--<EditText-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_width="0dp"-->
+                            <!--android:layout_weight="1"-->
+                            <!--android:gravity="end"-->
+                            <!--android:layout_marginStart="1dp"-->
+                            <!--android:background="#FFF"-->
+                            <!--android:inputType="time"-->
+                            <!--android:id="@+id/process2Time4"/>-->
+                    <!--</TableRow>-->
+
+                    <!--<TableRow-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:paddingBottom="1dp">-->
+                        <!--&lt;!&ndash; Hole5 &ndash;&gt;-->
+                        <!--<EditText-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_width="0dp"-->
+                            <!--android:layout_weight="1"-->
+                            <!--android:gravity="end"-->
+                            <!--android:layout_marginStart="1dp"-->
+                            <!--android:background="#FFF"-->
+                            <!--android:inputType="number"-->
+                            <!--android:id="@+id/process2Hole5"/>-->
+
+                        <!--&lt;!&ndash; Time5 &ndash;&gt;-->
+                        <!--<EditText-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_width="0dp"-->
+                            <!--android:layout_weight="1"-->
+                            <!--android:gravity="end"-->
+                            <!--android:layout_marginStart="1dp"-->
+                            <!--android:background="#FFF"-->
+                            <!--android:inputType="time"-->
+                            <!--android:id="@+id/process2Time5"/>-->
+                    <!--</TableRow>-->
+
+                    <!--<TableRow-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:paddingBottom="1dp">-->
+                        <!--&lt;!&ndash; Hole6 &ndash;&gt;-->
+                        <!--<EditText-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_width="0dp"-->
+                            <!--android:layout_weight="1"-->
+                            <!--android:gravity="end"-->
+                            <!--android:layout_marginStart="1dp"-->
+                            <!--android:background="#FFF"-->
+                            <!--android:inputType="number"-->
+                            <!--android:id="@+id/process2Hole6"/>-->
+
+                        <!--&lt;!&ndash; Time6 &ndash;&gt;-->
+                        <!--<EditText-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_width="0dp"-->
+                            <!--android:layout_weight="1"-->
+                            <!--android:gravity="end"-->
+                            <!--android:layout_marginStart="1dp"-->
+                            <!--android:background="#FFF"-->
+                            <!--android:inputType="time"-->
+                            <!--android:id="@+id/process2Time6"/>-->
+                    <!--</TableRow>-->
+
+                    <!--<TableRow-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:paddingBottom="1dp">-->
+                        <!--&lt;!&ndash; Hole7 &ndash;&gt;-->
+                        <!--<EditText-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_width="0dp"-->
+                            <!--android:layout_weight="1"-->
+                            <!--android:gravity="end"-->
+                            <!--android:layout_marginStart="1dp"-->
+                            <!--android:background="#FFF"-->
+                            <!--android:inputType="number"-->
+                            <!--android:id="@+id/process2Hole7"/>-->
+
+                        <!--&lt;!&ndash; Time7 &ndash;&gt;-->
+                        <!--<EditText-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_width="0dp"-->
+                            <!--android:layout_weight="1"-->
+                            <!--android:gravity="end"-->
+                            <!--android:layout_marginStart="1dp"-->
+                            <!--android:background="#FFF"-->
+                            <!--android:inputType="time"-->
+                            <!--android:id="@+id/process2Time7"/>-->
+                    <!--</TableRow>-->
+
+                    <!--<TableRow-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:paddingBottom="1dp">-->
+                        <!--&lt;!&ndash; Hole8 &ndash;&gt;-->
+                        <!--<EditText-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_width="0dp"-->
+                            <!--android:layout_weight="1"-->
+                            <!--android:gravity="end"-->
+                            <!--android:layout_marginStart="1dp"-->
+                            <!--android:background="#FFF"-->
+                            <!--android:inputType="number"-->
+                            <!--android:id="@+id/process2Hole8"/>-->
+
+                        <!--&lt;!&ndash; Time8 &ndash;&gt;-->
+                        <!--<EditText-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_width="0dp"-->
+                            <!--android:layout_weight="1"-->
+                            <!--android:gravity="end"-->
+                            <!--android:layout_marginStart="1dp"-->
+                            <!--android:background="#FFF"-->
+                            <!--android:inputType="time"-->
+                            <!--android:id="@+id/process2Time8"/>-->
+                    <!--</TableRow>-->
+
+                    <!--<TableRow-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:paddingBottom="1dp">-->
+                        <!--&lt;!&ndash; Hole9 &ndash;&gt;-->
+                        <!--<EditText-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_width="0dp"-->
+                            <!--android:layout_weight="1"-->
+                            <!--android:gravity="end"-->
+                            <!--android:layout_marginStart="1dp"-->
+                            <!--android:background="#FFF"-->
+                            <!--android:inputType="number"-->
+                            <!--android:id="@+id/process2Hole9"/>-->
+
+                        <!--&lt;!&ndash; Time9 &ndash;&gt;-->
+                        <!--<EditText-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_width="0dp"-->
+                            <!--android:layout_weight="1"-->
+                            <!--android:gravity="end"-->
+                            <!--android:layout_marginStart="1dp"-->
+                            <!--android:background="#FFF"-->
+                            <!--android:inputType="time"-->
+                            <!--android:id="@+id/process2Time9"/>-->
+                    <!--</TableRow>-->
+
+
+                <!--</TableLayout>-->
+
+
+                <!--&lt;!&ndash; After 18  &ndash;&gt;-->
+                <!--<EditText-->
+                    <!--android:layout_height="match_parent"-->
+                    <!--android:gravity="end"-->
+                    <!--android:padding="3dip"-->
+                    <!--android:layout_marginStart="1dp"-->
+                    <!--android:background="#FFF"-->
+                    <!--android:inputType="time" />-->
+            <!--</TableRow>-->
+
+            <!--&lt;!&ndash;Third Row &ndash;&gt;-->
+            <!--<TableRow-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:background="#CCC"-->
+                <!--android:paddingBottom="1dp"-->
+                <!--android:paddingEnd="1dp">-->
+                <!--&lt;!&ndash; Player# &ndash;&gt;-->
+                <!--<EditText-->
+                    <!--android:layout_height="match_parent"-->
+                    <!--android:gravity="end"-->
+                    <!--android:padding="3dip"-->
+                    <!--android:layout_marginStart="1dp"-->
+                    <!--android:background="#FFF"-->
+                    <!--android:inputType="number" />-->
+                <!--&lt;!&ndash; cart# &ndash;&gt;-->
+                <!--<EditText-->
+                    <!--android:layout_height="match_parent"-->
+                    <!--android:gravity="end"-->
+                    <!--android:padding="3dip"-->
+                    <!--android:layout_marginStart="1dp"-->
+                    <!--android:background="#FFF"/>-->
+
+                <!--&lt;!&ndash; startTime &ndash;&gt;-->
+                <!--<EditText-->
+                    <!--android:layout_height="match_parent"-->
+                    <!--android:gravity="end"-->
+                    <!--android:padding="3dip"-->
+                    <!--android:layout_marginStart="1dp"-->
+                    <!--android:background="#FFF"-->
+                    <!--android:inputType="time" />-->
+
+                <!--<TableLayout-->
+                    <!--android:layout_span="2"-->
+                    <!--android:layout_height="200dp"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:background="#CCC"-->
+                    <!--android:paddingTop="1dp"-->
+                    <!--android:stretchColumns="0">-->
+                    <!--<TableRow-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:paddingBottom="1dp"-->
+                        <!--&gt;-->
+                        <!--&lt;!&ndash; Hole#1 &ndash;&gt;-->
+                        <!--<EditText-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_width="0dp"-->
+                            <!--android:layout_weight="1"-->
+                            <!--android:gravity="end"-->
+                            <!--android:layout_marginStart="1dp"-->
+                            <!--android:background="#FFF"-->
+                            <!--android:inputType="number"-->
+                            <!--/>-->
+
+                        <!--&lt;!&ndash; Time1 &ndash;&gt;-->
+                        <!--<EditText-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_width="0dp"-->
+                            <!--android:layout_weight="1"-->
+                            <!--android:gravity="end"-->
+                            <!--android:layout_marginStart="1dp"-->
+                            <!--android:background="#FFF"-->
+                            <!--android:inputType="time"-->
+
+                            <!--/>-->
+                    <!--</TableRow>-->
+
+                    <!--<TableRow-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:paddingBottom="1dp">-->
+                        <!--&lt;!&ndash; Hole2 &ndash;&gt;-->
+                        <!--<EditText-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_width="0dp"-->
+                            <!--android:layout_weight="1"-->
+                            <!--android:gravity="end"-->
+                            <!--android:layout_marginStart="1dp"-->
+                            <!--android:background="#FFF"-->
+                            <!--android:inputType="number"-->
+                            <!--/>-->
+
+                        <!--&lt;!&ndash; Time2 &ndash;&gt;-->
+                        <!--<EditText-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_width="0dp"-->
+                            <!--android:layout_weight="1"-->
+                            <!--android:gravity="end"-->
+                            <!--android:layout_marginStart="1dp"-->
+                            <!--android:background="#FFF"-->
+                            <!--android:inputType="time"-->
+                            <!--/>-->
+                    <!--</TableRow>-->
+
+                    <!--<TableRow-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:paddingBottom="1dp">-->
+                        <!--&lt;!&ndash; Hole3 &ndash;&gt;-->
+                        <!--<EditText-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_width="0dp"-->
+                            <!--android:layout_weight="1"-->
+                            <!--android:gravity="end"-->
+                            <!--android:layout_marginStart="1dp"-->
+                            <!--android:background="#FFF"-->
+                            <!--android:inputType="number"-->
+                            <!--/>-->
+
+                        <!--&lt;!&ndash; Time3 &ndash;&gt;-->
+                        <!--<EditText-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_width="0dp"-->
+                            <!--android:layout_weight="1"-->
+                            <!--android:gravity="end"-->
+                            <!--android:layout_marginStart="1dp"-->
+                            <!--android:background="#FFF"-->
+                            <!--android:inputType="time"-->
+                            <!--/>-->
+                    <!--</TableRow>-->
+
+                    <!--<TableRow-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:paddingBottom="1dp">-->
+                        <!--&lt;!&ndash; Hole4 &ndash;&gt;-->
+                        <!--<EditText-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_width="0dp"-->
+                            <!--android:layout_weight="1"-->
+                            <!--android:gravity="end"-->
+                            <!--android:layout_marginStart="1dp"-->
+                            <!--android:background="#FFF"-->
+                            <!--android:inputType="number"-->
+                            <!--/>-->
+
+                        <!--&lt;!&ndash; Time4 &ndash;&gt;-->
+                        <!--<EditText-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_width="0dp"-->
+                            <!--android:layout_weight="1"-->
+                            <!--android:gravity="end"-->
+                            <!--android:layout_marginStart="1dp"-->
+                            <!--android:background="#FFF"-->
+                            <!--android:inputType="time"-->
+                            <!--/>-->
+                    <!--</TableRow>-->
+
+                    <!--<TableRow-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:paddingBottom="1dp">-->
+                        <!--&lt;!&ndash; Hole5 &ndash;&gt;-->
+                        <!--<EditText-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_width="0dp"-->
+                            <!--android:layout_weight="1"-->
+                            <!--android:gravity="end"-->
+                            <!--android:layout_marginStart="1dp"-->
+                            <!--android:background="#FFF"-->
+                            <!--android:inputType="number"-->
+                            <!--/>-->
+
+                        <!--&lt;!&ndash; Time5 &ndash;&gt;-->
+                        <!--<EditText-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_width="0dp"-->
+                            <!--android:layout_weight="1"-->
+                            <!--android:gravity="end"-->
+                            <!--android:layout_marginStart="1dp"-->
+                            <!--android:background="#FFF"-->
+                            <!--android:inputType="time"-->
+                            <!--/>-->
+                    <!--</TableRow>-->
+
+                    <!--<TableRow-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:paddingBottom="1dp">-->
+                        <!--&lt;!&ndash; Hole6 &ndash;&gt;-->
+                        <!--<EditText-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_width="0dp"-->
+                            <!--android:layout_weight="1"-->
+                            <!--android:gravity="end"-->
+                            <!--android:layout_marginStart="1dp"-->
+                            <!--android:background="#FFF"-->
+                            <!--android:inputType="number"-->
+                            <!--/>-->
+
+                        <!--&lt;!&ndash; Time6 &ndash;&gt;-->
+                        <!--<EditText-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_width="0dp"-->
+                            <!--android:layout_weight="1"-->
+                            <!--android:gravity="end"-->
+                            <!--android:layout_marginStart="1dp"-->
+                            <!--android:background="#FFF"-->
+                            <!--android:inputType="time"-->
+                            <!--/>-->
+                    <!--</TableRow>-->
+
+                    <!--<TableRow-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:paddingBottom="1dp">-->
+                        <!--&lt;!&ndash; Hole7 &ndash;&gt;-->
+                        <!--<EditText-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_width="0dp"-->
+                            <!--android:layout_weight="1"-->
+                            <!--android:gravity="end"-->
+                            <!--android:layout_marginStart="1dp"-->
+                            <!--android:background="#FFF"-->
+                            <!--android:inputType="number"-->
+                            <!--/>-->
+
+                        <!--&lt;!&ndash; Time7 &ndash;&gt;-->
+                        <!--<EditText-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_width="0dp"-->
+                            <!--android:layout_weight="1"-->
+                            <!--android:gravity="end"-->
+                            <!--android:layout_marginStart="1dp"-->
+                            <!--android:background="#FFF"-->
+                            <!--android:inputType="time"-->
+                            <!--/>-->
+                    <!--</TableRow>-->
+
+                    <!--<TableRow-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:paddingBottom="1dp">-->
+                        <!--&lt;!&ndash; Hole8 &ndash;&gt;-->
+                        <!--<EditText-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_width="0dp"-->
+                            <!--android:layout_weight="1"-->
+                            <!--android:gravity="end"-->
+                            <!--android:layout_marginStart="1dp"-->
+                            <!--android:background="#FFF"-->
+                            <!--android:inputType="number"-->
+                            <!--/>-->
+
+                        <!--&lt;!&ndash; Time8 &ndash;&gt;-->
+                        <!--<EditText-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_width="0dp"-->
+                            <!--android:layout_weight="1"-->
+                            <!--android:gravity="end"-->
+                            <!--android:layout_marginStart="1dp"-->
+                            <!--android:background="#FFF"-->
+                            <!--android:inputType="time"-->
+                            <!--/>-->
+                    <!--</TableRow>-->
+
+                    <!--<TableRow-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:paddingBottom="1dp">-->
+                        <!--&lt;!&ndash; Hole9 &ndash;&gt;-->
+                        <!--<EditText-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_width="0dp"-->
+                            <!--android:layout_weight="1"-->
+                            <!--android:gravity="end"-->
+                            <!--android:layout_marginStart="1dp"-->
+                            <!--android:background="#FFF"-->
+                            <!--android:inputType="number"-->
+                            <!--/>-->
+
+                        <!--&lt;!&ndash; Time9 &ndash;&gt;-->
+                        <!--<EditText-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_width="0dp"-->
+                            <!--android:layout_weight="1"-->
+                            <!--android:gravity="end"-->
+                            <!--android:layout_marginStart="1dp"-->
+                            <!--android:background="#FFF"-->
+                            <!--android:inputType="time"-->
+                            <!--/>-->
+                    <!--</TableRow>-->
+
+
+                <!--</TableLayout>-->
+
+
+                <!--&lt;!&ndash; After 9  &ndash;&gt;-->
+                <!--<EditText-->
+                    <!--android:layout_height="match_parent"-->
+                    <!--android:gravity="end"-->
+                    <!--android:padding="3dip"-->
+                    <!--android:layout_marginStart="1dp"-->
+                    <!--android:background="#FFF"-->
+                    <!--android:inputType="time" />-->
+
+                <!--<TableLayout-->
+                    <!--android:layout_span="2"-->
+                    <!--android:layout_height="200dp"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:background="#CCC"-->
+                    <!--android:paddingTop="1dp"-->
+                    <!--android:stretchColumns="0">-->
+                    <!--<TableRow-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:paddingBottom="1dp"-->
+                        <!--&gt;-->
+                        <!--&lt;!&ndash; Hole#1 &ndash;&gt;-->
+                        <!--<EditText-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_width="0dp"-->
+                            <!--android:layout_weight="1"-->
+                            <!--android:gravity="end"-->
+                            <!--android:layout_marginStart="1dp"-->
+                            <!--android:background="#FFF"-->
+                            <!--android:inputType="number"-->
+                            <!--/>-->
+
+                        <!--&lt;!&ndash; Time1 &ndash;&gt;-->
+                        <!--<EditText-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_width="0dp"-->
+                            <!--android:layout_weight="1"-->
+                            <!--android:gravity="end"-->
+                            <!--android:layout_marginStart="1dp"-->
+                            <!--android:background="#FFF"-->
+                            <!--android:inputType="time"-->
+
+                            <!--/>-->
+                    <!--</TableRow>-->
+
+                    <!--<TableRow-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:paddingBottom="1dp">-->
+                        <!--&lt;!&ndash; Hole2 &ndash;&gt;-->
+                        <!--<EditText-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_width="0dp"-->
+                            <!--android:layout_weight="1"-->
+                            <!--android:gravity="end"-->
+                            <!--android:layout_marginStart="1dp"-->
+                            <!--android:background="#FFF"-->
+                            <!--android:inputType="number"-->
+                            <!--/>-->
+
+                        <!--&lt;!&ndash; Time2 &ndash;&gt;-->
+                        <!--<EditText-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_width="0dp"-->
+                            <!--android:layout_weight="1"-->
+                            <!--android:gravity="end"-->
+                            <!--android:layout_marginStart="1dp"-->
+                            <!--android:background="#FFF"-->
+                            <!--android:inputType="time"-->
+                            <!--/>-->
+                    <!--</TableRow>-->
+
+                    <!--<TableRow-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:paddingBottom="1dp">-->
+                        <!--&lt;!&ndash; Hole3 &ndash;&gt;-->
+                        <!--<EditText-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_width="0dp"-->
+                            <!--android:layout_weight="1"-->
+                            <!--android:gravity="end"-->
+                            <!--android:layout_marginStart="1dp"-->
+                            <!--android:background="#FFF"-->
+                            <!--android:inputType="number"-->
+                            <!--/>-->
+
+                        <!--&lt;!&ndash; Time3 &ndash;&gt;-->
+                        <!--<EditText-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_width="0dp"-->
+                            <!--android:layout_weight="1"-->
+                            <!--android:gravity="end"-->
+                            <!--android:layout_marginStart="1dp"-->
+                            <!--android:background="#FFF"-->
+                            <!--android:inputType="time"-->
+                            <!--/>-->
+                    <!--</TableRow>-->
+
+                    <!--<TableRow-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:paddingBottom="1dp">-->
+                        <!--&lt;!&ndash; Hole4 &ndash;&gt;-->
+                        <!--<EditText-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_width="0dp"-->
+                            <!--android:layout_weight="1"-->
+                            <!--android:gravity="end"-->
+                            <!--android:layout_marginStart="1dp"-->
+                            <!--android:background="#FFF"-->
+                            <!--android:inputType="number"-->
+                            <!--/>-->
+
+                        <!--&lt;!&ndash; Time4 &ndash;&gt;-->
+                        <!--<EditText-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_width="0dp"-->
+                            <!--android:layout_weight="1"-->
+                            <!--android:gravity="end"-->
+                            <!--android:layout_marginStart="1dp"-->
+                            <!--android:background="#FFF"-->
+                            <!--android:inputType="time"-->
+                            <!--/>-->
+                    <!--</TableRow>-->
+
+                    <!--<TableRow-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:paddingBottom="1dp">-->
+                        <!--&lt;!&ndash; Hole5 &ndash;&gt;-->
+                        <!--<EditText-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_width="0dp"-->
+                            <!--android:layout_weight="1"-->
+                            <!--android:gravity="end"-->
+                            <!--android:layout_marginStart="1dp"-->
+                            <!--android:background="#FFF"-->
+                            <!--android:inputType="number"-->
+                            <!--/>-->
+
+                        <!--&lt;!&ndash; Time5 &ndash;&gt;-->
+                        <!--<EditText-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_width="0dp"-->
+                            <!--android:layout_weight="1"-->
+                            <!--android:gravity="end"-->
+                            <!--android:layout_marginStart="1dp"-->
+                            <!--android:background="#FFF"-->
+                            <!--android:inputType="time"-->
+                            <!--/>-->
+                    <!--</TableRow>-->
+
+                    <!--<TableRow-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:paddingBottom="1dp">-->
+                        <!--&lt;!&ndash; Hole6 &ndash;&gt;-->
+                        <!--<EditText-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_width="0dp"-->
+                            <!--android:layout_weight="1"-->
+                            <!--android:gravity="end"-->
+                            <!--android:layout_marginStart="1dp"-->
+                            <!--android:background="#FFF"-->
+                            <!--android:inputType="number"-->
+                            <!--/>-->
+
+                        <!--&lt;!&ndash; Time6 &ndash;&gt;-->
+                        <!--<EditText-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_width="0dp"-->
+                            <!--android:layout_weight="1"-->
+                            <!--android:gravity="end"-->
+                            <!--android:layout_marginStart="1dp"-->
+                            <!--android:background="#FFF"-->
+                            <!--android:inputType="time"-->
+                            <!--/>-->
+                    <!--</TableRow>-->
+
+                    <!--<TableRow-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:paddingBottom="1dp">-->
+                        <!--&lt;!&ndash; Hole7 &ndash;&gt;-->
+                        <!--<EditText-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_width="0dp"-->
+                            <!--android:layout_weight="1"-->
+                            <!--android:gravity="end"-->
+                            <!--android:layout_marginStart="1dp"-->
+                            <!--android:background="#FFF"-->
+                            <!--android:inputType="number"-->
+                            <!--/>-->
+
+                        <!--&lt;!&ndash; Time7 &ndash;&gt;-->
+                        <!--<EditText-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_width="0dp"-->
+                            <!--android:layout_weight="1"-->
+                            <!--android:gravity="end"-->
+                            <!--android:layout_marginStart="1dp"-->
+                            <!--android:background="#FFF"-->
+                            <!--android:inputType="time"-->
+                            <!--/>-->
+                    <!--</TableRow>-->
+
+                    <!--<TableRow-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:paddingBottom="1dp">-->
+                        <!--&lt;!&ndash; Hole8 &ndash;&gt;-->
+                        <!--<EditText-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_width="0dp"-->
+                            <!--android:layout_weight="1"-->
+                            <!--android:gravity="end"-->
+                            <!--android:layout_marginStart="1dp"-->
+                            <!--android:background="#FFF"-->
+                            <!--android:inputType="number"-->
+                            <!--/>-->
+
+                        <!--&lt;!&ndash; Time8 &ndash;&gt;-->
+                        <!--<EditText-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_width="0dp"-->
+                            <!--android:layout_weight="1"-->
+                            <!--android:gravity="end"-->
+                            <!--android:layout_marginStart="1dp"-->
+                            <!--android:background="#FFF"-->
+                            <!--android:inputType="time"-->
+                            <!--/>-->
+                    <!--</TableRow>-->
+
+                    <!--<TableRow-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:paddingBottom="1dp">-->
+                        <!--&lt;!&ndash; Hole9 &ndash;&gt;-->
+                        <!--<EditText-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_width="0dp"-->
+                            <!--android:layout_weight="1"-->
+                            <!--android:gravity="end"-->
+                            <!--android:layout_marginStart="1dp"-->
+                            <!--android:background="#FFF"-->
+                            <!--android:inputType="number"-->
+                            <!--/>-->
+
+                        <!--&lt;!&ndash; Time9 &ndash;&gt;-->
+                        <!--<EditText-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_width="0dp"-->
+                            <!--android:layout_weight="1"-->
+                            <!--android:gravity="end"-->
+                            <!--android:layout_marginStart="1dp"-->
+                            <!--android:background="#FFF"-->
+                            <!--android:inputType="time"-->
+                            <!--/>-->
+                    <!--</TableRow>-->
+
+
+                <!--</TableLayout>-->
+
+
+                <!--&lt;!&ndash; After 18  &ndash;&gt;-->
+                <!--<EditText-->
+                    <!--android:layout_height="match_parent"-->
+                    <!--android:gravity="end"-->
+                    <!--android:padding="3dip"-->
+                    <!--android:layout_marginStart="1dp"-->
+                    <!--android:background="#FFF"-->
+                    <!--android:inputType="time" />-->
+            <!--</TableRow>-->
+
+            <!--&lt;!&ndash;Fourth Row &ndash;&gt;-->
+            <!--<TableRow-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:background="#CCC"-->
+                <!--android:paddingBottom="1dp"-->
+                <!--android:paddingEnd="1dp">-->
+                <!--&lt;!&ndash; Player# &ndash;&gt;-->
+                <!--<EditText-->
+                    <!--android:layout_height="match_parent"-->
+                    <!--android:gravity="end"-->
+                    <!--android:padding="3dip"-->
+                    <!--android:layout_marginStart="1dp"-->
+                    <!--android:background="#FFF"-->
+                    <!--android:inputType="number" />-->
+                <!--&lt;!&ndash; cart# &ndash;&gt;-->
+                <!--<EditText-->
+                    <!--android:layout_height="match_parent"-->
+                    <!--android:gravity="end"-->
+                    <!--android:padding="3dip"-->
+                    <!--android:layout_marginStart="1dp"-->
+                    <!--android:background="#FFF"/>-->
+
+                <!--&lt;!&ndash; startTime &ndash;&gt;-->
+                <!--<EditText-->
+                    <!--android:layout_height="match_parent"-->
+                    <!--android:gravity="end"-->
+                    <!--android:padding="3dip"-->
+                    <!--android:layout_marginStart="1dp"-->
+                    <!--android:background="#FFF"-->
+                    <!--android:inputType="time" />-->
+
+                <!--<TableLayout-->
+                    <!--android:layout_span="2"-->
+                    <!--android:layout_height="200dp"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:background="#CCC"-->
+                    <!--android:paddingTop="1dp"-->
+                    <!--android:stretchColumns="0">-->
+                    <!--<TableRow-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:paddingBottom="1dp"-->
+                        <!--&gt;-->
+                        <!--&lt;!&ndash; Hole#1 &ndash;&gt;-->
+                        <!--<EditText-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_width="0dp"-->
+                            <!--android:layout_weight="1"-->
+                            <!--android:gravity="end"-->
+                            <!--android:layout_marginStart="1dp"-->
+                            <!--android:background="#FFF"-->
+                            <!--android:inputType="number"-->
+                            <!--/>-->
+
+                        <!--&lt;!&ndash; Time1 &ndash;&gt;-->
+                        <!--<EditText-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_width="0dp"-->
+                            <!--android:layout_weight="1"-->
+                            <!--android:gravity="end"-->
+                            <!--android:layout_marginStart="1dp"-->
+                            <!--android:background="#FFF"-->
+                            <!--android:inputType="time"-->
+
+                            <!--/>-->
+                    <!--</TableRow>-->
+
+                    <!--<TableRow-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:paddingBottom="1dp">-->
+                        <!--&lt;!&ndash; Hole2 &ndash;&gt;-->
+                        <!--<EditText-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_width="0dp"-->
+                            <!--android:layout_weight="1"-->
+                            <!--android:gravity="end"-->
+                            <!--android:layout_marginStart="1dp"-->
+                            <!--android:background="#FFF"-->
+                            <!--android:inputType="number"-->
+                            <!--/>-->
+
+                        <!--&lt;!&ndash; Time2 &ndash;&gt;-->
+                        <!--<EditText-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_width="0dp"-->
+                            <!--android:layout_weight="1"-->
+                            <!--android:gravity="end"-->
+                            <!--android:layout_marginStart="1dp"-->
+                            <!--android:background="#FFF"-->
+                            <!--android:inputType="time"-->
+                            <!--/>-->
+                    <!--</TableRow>-->
+
+                    <!--<TableRow-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:paddingBottom="1dp">-->
+                        <!--&lt;!&ndash; Hole3 &ndash;&gt;-->
+                        <!--<EditText-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_width="0dp"-->
+                            <!--android:layout_weight="1"-->
+                            <!--android:gravity="end"-->
+                            <!--android:layout_marginStart="1dp"-->
+                            <!--android:background="#FFF"-->
+                            <!--android:inputType="number"-->
+                            <!--/>-->
+
+                        <!--&lt;!&ndash; Time3 &ndash;&gt;-->
+                        <!--<EditText-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_width="0dp"-->
+                            <!--android:layout_weight="1"-->
+                            <!--android:gravity="end"-->
+                            <!--android:layout_marginStart="1dp"-->
+                            <!--android:background="#FFF"-->
+                            <!--android:inputType="time"-->
+                            <!--/>-->
+                    <!--</TableRow>-->
+
+                    <!--<TableRow-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:paddingBottom="1dp">-->
+                        <!--&lt;!&ndash; Hole4 &ndash;&gt;-->
+                        <!--<EditText-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_width="0dp"-->
+                            <!--android:layout_weight="1"-->
+                            <!--android:gravity="end"-->
+                            <!--android:layout_marginStart="1dp"-->
+                            <!--android:background="#FFF"-->
+                            <!--android:inputType="number"-->
+                            <!--/>-->
+
+                        <!--&lt;!&ndash; Time4 &ndash;&gt;-->
+                        <!--<EditText-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_width="0dp"-->
+                            <!--android:layout_weight="1"-->
+                            <!--android:gravity="end"-->
+                            <!--android:layout_marginStart="1dp"-->
+                            <!--android:background="#FFF"-->
+                            <!--android:inputType="time"-->
+                            <!--/>-->
+                    <!--</TableRow>-->
+
+                    <!--<TableRow-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:paddingBottom="1dp">-->
+                        <!--&lt;!&ndash; Hole5 &ndash;&gt;-->
+                        <!--<EditText-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_width="0dp"-->
+                            <!--android:layout_weight="1"-->
+                            <!--android:gravity="end"-->
+                            <!--android:layout_marginStart="1dp"-->
+                            <!--android:background="#FFF"-->
+                            <!--android:inputType="number"-->
+                            <!--/>-->
+
+                        <!--&lt;!&ndash; Time5 &ndash;&gt;-->
+                        <!--<EditText-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_width="0dp"-->
+                            <!--android:layout_weight="1"-->
+                            <!--android:gravity="end"-->
+                            <!--android:layout_marginStart="1dp"-->
+                            <!--android:background="#FFF"-->
+                            <!--android:inputType="time"-->
+                            <!--/>-->
+                    <!--</TableRow>-->
+
+                    <!--<TableRow-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:paddingBottom="1dp">-->
+                        <!--&lt;!&ndash; Hole6 &ndash;&gt;-->
+                        <!--<EditText-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_width="0dp"-->
+                            <!--android:layout_weight="1"-->
+                            <!--android:gravity="end"-->
+                            <!--android:layout_marginStart="1dp"-->
+                            <!--android:background="#FFF"-->
+                            <!--android:inputType="number"-->
+                            <!--/>-->
+
+                        <!--&lt;!&ndash; Time6 &ndash;&gt;-->
+                        <!--<EditText-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_width="0dp"-->
+                            <!--android:layout_weight="1"-->
+                            <!--android:gravity="end"-->
+                            <!--android:layout_marginStart="1dp"-->
+                            <!--android:background="#FFF"-->
+                            <!--android:inputType="time"-->
+                            <!--/>-->
+                    <!--</TableRow>-->
+
+                    <!--<TableRow-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:paddingBottom="1dp">-->
+                        <!--&lt;!&ndash; Hole7 &ndash;&gt;-->
+                        <!--<EditText-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_width="0dp"-->
+                            <!--android:layout_weight="1"-->
+                            <!--android:gravity="end"-->
+                            <!--android:layout_marginStart="1dp"-->
+                            <!--android:background="#FFF"-->
+                            <!--android:inputType="number"-->
+                            <!--/>-->
+
+                        <!--&lt;!&ndash; Time7 &ndash;&gt;-->
+                        <!--<EditText-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_width="0dp"-->
+                            <!--android:layout_weight="1"-->
+                            <!--android:gravity="end"-->
+                            <!--android:layout_marginStart="1dp"-->
+                            <!--android:background="#FFF"-->
+                            <!--android:inputType="time"-->
+                            <!--/>-->
+                    <!--</TableRow>-->
+
+                    <!--<TableRow-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:paddingBottom="1dp">-->
+                        <!--&lt;!&ndash; Hole8 &ndash;&gt;-->
+                        <!--<EditText-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_width="0dp"-->
+                            <!--android:layout_weight="1"-->
+                            <!--android:gravity="end"-->
+                            <!--android:layout_marginStart="1dp"-->
+                            <!--android:background="#FFF"-->
+                            <!--android:inputType="number"-->
+                            <!--/>-->
+
+                        <!--&lt;!&ndash; Time8 &ndash;&gt;-->
+                        <!--<EditText-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_width="0dp"-->
+                            <!--android:layout_weight="1"-->
+                            <!--android:gravity="end"-->
+                            <!--android:layout_marginStart="1dp"-->
+                            <!--android:background="#FFF"-->
+                            <!--android:inputType="time"-->
+                            <!--/>-->
+                    <!--</TableRow>-->
+
+                    <!--<TableRow-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:paddingBottom="1dp">-->
+                        <!--&lt;!&ndash; Hole9 &ndash;&gt;-->
+                        <!--<EditText-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_width="0dp"-->
+                            <!--android:layout_weight="1"-->
+                            <!--android:gravity="end"-->
+                            <!--android:layout_marginStart="1dp"-->
+                            <!--android:background="#FFF"-->
+                            <!--android:inputType="number"-->
+                            <!--/>-->
+
+                        <!--&lt;!&ndash; Time9 &ndash;&gt;-->
+                        <!--<EditText-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_width="0dp"-->
+                            <!--android:layout_weight="1"-->
+                            <!--android:gravity="end"-->
+                            <!--android:layout_marginStart="1dp"-->
+                            <!--android:background="#FFF"-->
+                            <!--android:inputType="time"-->
+                            <!--/>-->
+                    <!--</TableRow>-->
+
+
+                <!--</TableLayout>-->
+
+
+                <!--&lt;!&ndash; After 9  &ndash;&gt;-->
+                <!--<EditText-->
+                    <!--android:layout_height="match_parent"-->
+                    <!--android:gravity="end"-->
+                    <!--android:padding="3dip"-->
+                    <!--android:layout_marginStart="1dp"-->
+                    <!--android:background="#FFF"-->
+                    <!--android:inputType="time" />-->
+
+                <!--<TableLayout-->
+                    <!--android:layout_span="2"-->
+                    <!--android:layout_height="200dp"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:background="#CCC"-->
+                    <!--android:paddingTop="1dp"-->
+                    <!--android:stretchColumns="0">-->
+                    <!--<TableRow-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:paddingBottom="1dp"-->
+                        <!--&gt;-->
+                        <!--&lt;!&ndash; Hole#1 &ndash;&gt;-->
+                        <!--<EditText-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_width="0dp"-->
+                            <!--android:layout_weight="1"-->
+                            <!--android:gravity="end"-->
+                            <!--android:layout_marginStart="1dp"-->
+                            <!--android:background="#FFF"-->
+                            <!--android:inputType="number"-->
+                            <!--/>-->
+
+                        <!--&lt;!&ndash; Time1 &ndash;&gt;-->
+                        <!--<EditText-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_width="0dp"-->
+                            <!--android:layout_weight="1"-->
+                            <!--android:gravity="end"-->
+                            <!--android:layout_marginStart="1dp"-->
+                            <!--android:background="#FFF"-->
+                            <!--android:inputType="time"-->
+
+                            <!--/>-->
+                    <!--</TableRow>-->
+
+                    <!--<TableRow-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:paddingBottom="1dp">-->
+                        <!--&lt;!&ndash; Hole2 &ndash;&gt;-->
+                        <!--<EditText-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_width="0dp"-->
+                            <!--android:layout_weight="1"-->
+                            <!--android:gravity="end"-->
+                            <!--android:layout_marginStart="1dp"-->
+                            <!--android:background="#FFF"-->
+                            <!--android:inputType="number"-->
+                            <!--/>-->
+
+                        <!--&lt;!&ndash; Time2 &ndash;&gt;-->
+                        <!--<EditText-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_width="0dp"-->
+                            <!--android:layout_weight="1"-->
+                            <!--android:gravity="end"-->
+                            <!--android:layout_marginStart="1dp"-->
+                            <!--android:background="#FFF"-->
+                            <!--android:inputType="time"-->
+                            <!--/>-->
+                    <!--</TableRow>-->
+
+                    <!--<TableRow-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:paddingBottom="1dp">-->
+                        <!--&lt;!&ndash; Hole3 &ndash;&gt;-->
+                        <!--<EditText-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_width="0dp"-->
+                            <!--android:layout_weight="1"-->
+                            <!--android:gravity="end"-->
+                            <!--android:layout_marginStart="1dp"-->
+                            <!--android:background="#FFF"-->
+                            <!--android:inputType="number"-->
+                            <!--/>-->
+
+                        <!--&lt;!&ndash; Time3 &ndash;&gt;-->
+                        <!--<EditText-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_width="0dp"-->
+                            <!--android:layout_weight="1"-->
+                            <!--android:gravity="end"-->
+                            <!--android:layout_marginStart="1dp"-->
+                            <!--android:background="#FFF"-->
+                            <!--android:inputType="time"-->
+                            <!--/>-->
+                    <!--</TableRow>-->
+
+                    <!--<TableRow-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:paddingBottom="1dp">-->
+                        <!--&lt;!&ndash; Hole4 &ndash;&gt;-->
+                        <!--<EditText-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_width="0dp"-->
+                            <!--android:layout_weight="1"-->
+                            <!--android:gravity="end"-->
+                            <!--android:layout_marginStart="1dp"-->
+                            <!--android:background="#FFF"-->
+                            <!--android:inputType="number"-->
+                            <!--/>-->
+
+                        <!--&lt;!&ndash; Time4 &ndash;&gt;-->
+                        <!--<EditText-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_width="0dp"-->
+                            <!--android:layout_weight="1"-->
+                            <!--android:gravity="end"-->
+                            <!--android:layout_marginStart="1dp"-->
+                            <!--android:background="#FFF"-->
+                            <!--android:inputType="time"-->
+                            <!--/>-->
+                    <!--</TableRow>-->
+
+                    <!--<TableRow-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:paddingBottom="1dp">-->
+                        <!--&lt;!&ndash; Hole5 &ndash;&gt;-->
+                        <!--<EditText-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_width="0dp"-->
+                            <!--android:layout_weight="1"-->
+                            <!--android:gravity="end"-->
+                            <!--android:layout_marginStart="1dp"-->
+                            <!--android:background="#FFF"-->
+                            <!--android:inputType="number"-->
+                            <!--/>-->
+
+                        <!--&lt;!&ndash; Time5 &ndash;&gt;-->
+                        <!--<EditText-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_width="0dp"-->
+                            <!--android:layout_weight="1"-->
+                            <!--android:gravity="end"-->
+                            <!--android:layout_marginStart="1dp"-->
+                            <!--android:background="#FFF"-->
+                            <!--android:inputType="time"-->
+                            <!--/>-->
+                    <!--</TableRow>-->
+
+                    <!--<TableRow-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:paddingBottom="1dp">-->
+                        <!--&lt;!&ndash; Hole6 &ndash;&gt;-->
+                        <!--<EditText-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_width="0dp"-->
+                            <!--android:layout_weight="1"-->
+                            <!--android:gravity="end"-->
+                            <!--android:layout_marginStart="1dp"-->
+                            <!--android:background="#FFF"-->
+                            <!--android:inputType="number"-->
+                            <!--/>-->
+
+                        <!--&lt;!&ndash; Time6 &ndash;&gt;-->
+                        <!--<EditText-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_width="0dp"-->
+                            <!--android:layout_weight="1"-->
+                            <!--android:gravity="end"-->
+                            <!--android:layout_marginStart="1dp"-->
+                            <!--android:background="#FFF"-->
+                            <!--android:inputType="time"-->
+                            <!--/>-->
+                    <!--</TableRow>-->
+
+                    <!--<TableRow-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:paddingBottom="1dp">-->
+                        <!--&lt;!&ndash; Hole7 &ndash;&gt;-->
+                        <!--<EditText-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_width="0dp"-->
+                            <!--android:layout_weight="1"-->
+                            <!--android:gravity="end"-->
+                            <!--android:layout_marginStart="1dp"-->
+                            <!--android:background="#FFF"-->
+                            <!--android:inputType="number"-->
+                            <!--/>-->
+
+                        <!--&lt;!&ndash; Time7 &ndash;&gt;-->
+                        <!--<EditText-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_width="0dp"-->
+                            <!--android:layout_weight="1"-->
+                            <!--android:gravity="end"-->
+                            <!--android:layout_marginStart="1dp"-->
+                            <!--android:background="#FFF"-->
+                            <!--android:inputType="time"-->
+                            <!--/>-->
+                    <!--</TableRow>-->
+
+                    <!--<TableRow-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:paddingBottom="1dp">-->
+                        <!--&lt;!&ndash; Hole8 &ndash;&gt;-->
+                        <!--<EditText-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_width="0dp"-->
+                            <!--android:layout_weight="1"-->
+                            <!--android:gravity="end"-->
+                            <!--android:layout_marginStart="1dp"-->
+                            <!--android:background="#FFF"-->
+                            <!--android:inputType="number"-->
+                            <!--/>-->
+
+                        <!--&lt;!&ndash; Time8 &ndash;&gt;-->
+                        <!--<EditText-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_width="0dp"-->
+                            <!--android:layout_weight="1"-->
+                            <!--android:gravity="end"-->
+                            <!--android:layout_marginStart="1dp"-->
+                            <!--android:background="#FFF"-->
+                            <!--android:inputType="time"-->
+                            <!--/>-->
+                    <!--</TableRow>-->
+
+                    <!--<TableRow-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:paddingBottom="1dp">-->
+                        <!--&lt;!&ndash; Hole9 &ndash;&gt;-->
+                        <!--<EditText-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_width="0dp"-->
+                            <!--android:layout_weight="1"-->
+                            <!--android:gravity="end"-->
+                            <!--android:layout_marginStart="1dp"-->
+                            <!--android:background="#FFF"-->
+                            <!--android:inputType="number"-->
+                            <!--/>-->
+
+                        <!--&lt;!&ndash; Time9 &ndash;&gt;-->
+                        <!--<EditText-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_width="0dp"-->
+                            <!--android:layout_weight="1"-->
+                            <!--android:gravity="end"-->
+                            <!--android:layout_marginStart="1dp"-->
+                            <!--android:background="#FFF"-->
+                            <!--android:inputType="time"-->
+                            <!--/>-->
+                    <!--</TableRow>-->
+
+
+                <!--</TableLayout>-->
+
+
+                <!--&lt;!&ndash; After 18  &ndash;&gt;-->
+                <!--<EditText-->
+                    <!--android:layout_height="match_parent"-->
+                    <!--android:gravity="end"-->
+                    <!--android:padding="3dip"-->
+                    <!--android:layout_marginStart="1dp"-->
+                    <!--android:background="#FFF"-->
+                    <!--android:inputType="time" />-->
+            <!--</TableRow>-->
+
+
+
+        <!--</TableLayout>-->
+
+    <!--</ScrollView>-->
+
+    <include layout="@layout/table" ></include>
 </FrameLayout>
